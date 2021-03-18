@@ -28,6 +28,8 @@ How to use it?
 - ``apikey --> APIKEY or the API Token``
 - ``apiquery --> API GET Method``
 
+.. code-block:: Python
+
     >>> from infocyteapiquery import infocyteapiquery as ic
     >>> cname = "m...n"
     >>> apikey = "J8ARPa3iQR6...8HGUkElBBXra4mdEq"
@@ -56,14 +58,18 @@ For ``apiquery``, create a list as below.
 
 Above list can be iterated to export the date into excel file.
 
-``with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:``
-    ``alertpd.to_excel(writer, sheet_name='Alerts')``
-    ``artifactpd.to_excel(writer, sheet_name='Artifacts')``
-    ``processpd.to_excel(writer, sheet_name='Process')``
-    ``modulepd.to_excel(writer, sheet_name='Module')``
+.. code-block:: Python
+
+    with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:
+        alertpd.to_excel(writer, sheet_name='Alerts')
+        artifactpd.to_excel(writer, sheet_name='Artifacts')
+        processpd.to_excel(writer, sheet_name='Process')
+        modulepd.to_excel(writer, sheet_name='Module')
 
 License
 -------
+
+See LICENSE file for more details.
 
 © 2021 Manjesh N
 

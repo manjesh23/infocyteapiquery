@@ -22,8 +22,11 @@ setup(
     python_requires='>=3.5',
     package_dir={'': '.'},
     classifiers=[
-        'Development Status :: 2 - Pre-Alpha',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
+        'Intended Audience :: End Users/Desktop',
+        'Intended Audience :: Information Technology',
+        'Intended Audience :: Customer Service',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3.6',
@@ -43,6 +46,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/manjesh23/infocyteapiquery',
-    version='1.0.33',
+    version='1.0.34',
     zip_safe=False,
 )
