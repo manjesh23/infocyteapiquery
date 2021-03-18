@@ -22,7 +22,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: manjesh23
   password:
-    secure: 2VjNkW0iZ7jzlDolkeWniA
+    secure: 2VjNkW0iZ7gzlDolkeWniA
   on:
     tags: true
     repo: manjesh23/infocyteapiquery
