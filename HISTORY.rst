@@ -20,7 +20,7 @@ History
 0.1.1(2021-02-18)
 ------------------
 
-* Added all the dependencies | sbuild & bdist ready
+* Added all the dependencies | sdist & bdist ready
 
 1.0.1(2021-03-17)
 ------------------
@@ -31,3 +31,9 @@ History
 ------------------
 
 * First release on PyPI.
+
+1.0.35(2021-03-18)
+------------------
+
+* Updated README file with export examples to xlsx and db file.
+* Second release on PyPI
