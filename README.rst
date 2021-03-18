@@ -7,8 +7,8 @@ Infocyte API Query
 **Python module | Used to get API data from Infocyte Cloud Instances into the pandas DataFrame | Defaults to 90 days**
 
 
-Required Modules
-----------------
+Required Modules (Installed as prerequisite)
+--------------------------------------------
 
 -   requests
 -   pandas
@@ -46,14 +46,29 @@ How to use it?
     (dtype='object')
 
 
-* Free software: Apache Software License 2.0
-* Documentation: https://infocyteapiquery.readthedocs.io.
-
 
 Features
 --------
 
-* TODO
+For ``apiquery``, create a list as below.
 
-Credits
+``apiquery = ['AlertDetails','ArtifactDetails','ModuleDetails','ProcessDetails']``
+
+Above list can be iterated to export the date into excel file.
+
+``with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:``
+    
+    ``alertpd.to_excel(writer, sheet_name='Alerts')``
+
+    ``artifactpd.to_excel(writer, sheet_name='Artifacts')``
+
+    ``processpd.to_excel(writer, sheet_name='Process')``
+
+    ``modulepd.to_excel(writer, sheet_name='Module')``
+
+License
 -------
+
+© 2021 Manjesh N
+
+This repository is licensed under the Apache 2.0 license. See LICENSE for details.
