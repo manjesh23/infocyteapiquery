@@ -56,15 +56,32 @@ For ``apiquery``, create a list as below.
 
 ``apiquery = ['AlertDetails','ArtifactDetails','ModuleDetails','ProcessDetails']``
 
-Above list can be iterated to export the date into excel file.
+Loop:
+
+.. code-block:: Python
+
+    >>> for i in apiquery:
+         icdata = ic.query(cname=cname, apikey=apikey, apiquery=i)
+         print(icdata.head())
+         # Export to .xlsx or .db file
+
+Export date into excel file.
 
 .. code-block:: Python
 
     with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:
-        alertpd.to_excel(writer, sheet_name='Alerts')
-        artifactpd.to_excel(writer, sheet_name='Artifacts')
-        processpd.to_excel(writer, sheet_name='Process')
-        modulepd.to_excel(writer, sheet_name='Module')
+        icdata.to_excel(writer, sheet_name='Alerts')
+
+Export data into sqlite file.
+
+.. code-block:: Python
+
+    from sqlalchemy import create_engine
+    alerttab = "Alerts"
+    engine = create_engine('sqlite:///'+cname+'.infocyte.db', echo=False)
+    sqlite_connection = engine.connect()
+    icdata.to_sql(alerttab, sqlite_connection, if_exists='fail')
+    sqlite_connection.close()
 
 License
 -------
