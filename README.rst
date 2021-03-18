@@ -56,15 +56,14 @@ For ``apiquery``, create a list as below.
 
 Above list can be iterated to export the date into excel file.
 
-``with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:``
-    
-    ``alertpd.to_excel(writer, sheet_name='Alerts')``
+.. code-block:: Python
+   :linenos:
 
-    ``artifactpd.to_excel(writer, sheet_name='Artifacts')``
-
-    ``processpd.to_excel(writer, sheet_name='Process')``
-
-    ``modulepd.to_excel(writer, sheet_name='Module')``
+with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:
+    alertpd.to_excel(writer, sheet_name='Alerts')
+    artifactpd.to_excel(writer, sheet_name='Artifacts')
+    processpd.to_excel(writer, sheet_name='Process')
+    modulepd.to_excel(writer, sheet_name='Module')
 
 License
 -------
