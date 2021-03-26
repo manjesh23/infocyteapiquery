@@ -4,4 +4,4 @@ Usage
 
 To use infocyteapiquery in a project::
 
-    import infocyteapiquery
+    from infocyteapiquery import infocyteapiquery as ic

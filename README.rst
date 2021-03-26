@@ -115,8 +115,6 @@ Export data into sqlite file.
 License
 -------
 
-See LICENSE file for more details.
-
 © 2021 Manjesh N
 
 This repository is licensed under the Apache 2.0 license. See LICENSE for details.
