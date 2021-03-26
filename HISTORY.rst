@@ -38,7 +38,7 @@ History
 * Updated README file with export examples to xlsx and db file.
 * Second release on PyPI
 
-1.0.36(2021-03-18)
+1.0.36(2021-03-27)
 ------------------
 
 * Added PowerShell data pull capabilities

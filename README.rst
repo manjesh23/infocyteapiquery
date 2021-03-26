@@ -13,13 +13,14 @@ Required Modules (Installed as prerequisite)
 -   requests
 -   pandas
 -   json
+-   subprocess
 
 Installation
 ------------
 
-``pip install infocyteapiquery``
+``pip install --upgrade infocyteapiquery``
 
-How to use it?
+How to use API Query?
 --------------
 
 **Takes 3 arguments:**
@@ -47,7 +48,34 @@ How to use it?
     'managed', 'createdOn', 'archived'],
     (dtype='object')
 
+How to use PowerShell Query?
 
+**Takes 3 arguments:**
+
+- ``cname --> Cloud Instance Name <cname.infocyte.com>``
+- ``apikey --> APIKEY or the API Token``
+- ``pscmd --> PowerShell Script Commands``
+
+.. code-block:: Python
+
+    >>> from infocyteapiquery import infocyteapiquery as ic
+    >>> cname = "m...n"
+    >>> apikey = "J8ARPa3iQR6...8HGUkElBBXra4mdEq"
+    >>> ps1cmd = '''
+    ... $man = Get-ICAlert
+    ... ($man).name
+    ... '''
+    >>> psfull = ic.ps(cname, apikey, pscmd)
+    >>> print(psfull)
+    rdpwrap.dll
+    calculator.exe
+    rundll32.exe
+    ...
+    ...
+    cmd.exe
+    python.exe
+    cmd.exe
+'''
 
 Features
 --------
