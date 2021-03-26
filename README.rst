@@ -49,6 +49,7 @@ How to use API Query?
     (dtype='object')
 
 How to use PowerShell Query?
+--------------
 
 **Takes 3 arguments:**
 
