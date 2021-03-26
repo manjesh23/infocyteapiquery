@@ -76,7 +76,6 @@ How to use PowerShell Query?
     cmd.exe
     python.exe
     cmd.exe
-'''
 
 Features
 --------
