@@ -62,12 +62,13 @@ How to use PowerShell Query?
     >>> from infocyteapiquery import infocyteapiquery as ic
     >>> cname = "m...n"
     >>> apikey = "J8ARPa3iQR6...8HGUkElBBXra4mdEq"
-    >>> ps1cmd = '''
-    ... $man = Get-ICAlert
-    ... ($man).name
+    >>> 
+    >>>pscmd = '''
+    ... $psvariable = Get-ICAlert
+    ... ($psvariable).name
     ... '''
-    >>> psfull = ic.ps(cname, apikey, pscmd)
-    >>> print(psfull)
+    >>> psdata = ic.ps(cname, apikey, pscmd)
+    >>> print(psdata)
     rdpwrap.dll
     calculator.exe
     rundll32.exe
