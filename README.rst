@@ -94,7 +94,7 @@ Loop:
          print(icdata.head())
          # Export to .xlsx or .db file
 
-Export date into excel file.
+Export data into excel file.
 
 .. code-block:: Python
 
