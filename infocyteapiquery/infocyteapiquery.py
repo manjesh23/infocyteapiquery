@@ -3,6 +3,8 @@ import requests
 import pandas as pd
 import json
 import subprocess
+from tqdm import tqdm
+from tqdm.gui import tqdm as tqdm_gui
 
 # Set pandas to show full rows and columns
 pd.set_option('display.max_rows', None)
@@ -17,22 +19,22 @@ This is API Query Function
 
 
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
+    tqdm.pandas()
     global icpd
     ic = requests.get("https://"+cname+".infocyte.com/api/" +
                       apiquery+"?access_token="+apikey + "&count=True")
     iccount = (str(ic.headers.get("X-Total-Count"))[:-3])
     if (len(iccount) == 0):
         loopic = ic
-        print("Loading " + apiquery)
-        icdata = json.loads(loopic.text)
-        icdb = pd.DataFrame(icdata)
-        icpd = icdb
+        for x in tqdm(range(1), desc="Loading " + apiquery, ncols=100, unit='Loop(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='GREEN'):
+            icdata = json.loads(loopic.text)
+            icdb = pd.DataFrame(icdata)
+            icpd = icdb
     else:
-        print("Loading " + apiquery)
         icdata = json.loads(ic.text)
         icdb = pd.DataFrame(icdata)
         icpd = icdb
-        for x in (num+1 for num in range(int(iccount))):
+        for x in (num+1 for num in tqdm(range(int(iccount)), desc="Loading " + apiquery, ncols=100, unit='Loop(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='GREEN')):
             if x > 9:
                 loopic = requests.get("https://"+cname+".infocyte.com/api/"+apiquery +
                                       "?access_token=" + apikey+"&filter={\"skip\": "+str(x).ljust(5, '0')+"}")
