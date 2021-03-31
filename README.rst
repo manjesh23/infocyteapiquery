@@ -14,6 +14,7 @@ Required Modules (Installed as prerequisite)
 -   pandas
 -   json
 -   subprocess
+-   tqdm
 
 Installation
 ------------
