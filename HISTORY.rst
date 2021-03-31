@@ -42,3 +42,10 @@ History
 ------------------
 
 * Added PowerShell data pull capabilities
+
+1.1.1(2021-03-31)
+------------------
+
+* tqdm module is requested, setup file is updated with version info and removed the setup_requirements.
+* Now Query function shows the progress bar.
+* Minor bug fixed in ps function (Omitted initial True --> Set-ICInstance (Output = True))

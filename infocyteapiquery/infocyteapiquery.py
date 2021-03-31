@@ -4,7 +4,6 @@ import pandas as pd
 import json
 import subprocess
 from tqdm import tqdm
-from tqdm.gui import tqdm as tqdm_gui
 
 # Set pandas to show full rows and columns
 pd.set_option('display.max_rows', None)
@@ -66,7 +65,7 @@ def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
     doutput = raw.stdout.read()
     stdout, stderr = raw.communicate()
     output = doutput.decode("utf-8")
-    return output
+    return output[6:]
 
 
 # EOF

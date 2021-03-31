@@ -10,16 +10,16 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ["requests", "pandas"]
+requirements = ["requests", "pandas", "tqdm"]
 
-setup_requirements = ['pytest-runner', ]
+# setup_requirements = ['pytest-runner', ]
 
 test_requirements = ['pytest>=3', ]
 
 setup(
     author="Manjesh N",
     author_email='manjesh_n@hotmail.com',
-    python_requires='>=3.5',
+    python_requires='>=3.6',
     package_dir={'': '.'},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -42,10 +42,10 @@ setup(
     keywords='infocyteapiquery',
     name='infocyteapiquery',
     packages=["infocyteapiquery"],
-    setup_requires=setup_requirements,
+    # setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/manjesh23/infocyteapiquery',
-    version='1.0.36',
+    version='1.1.1',
     zip_safe=False,
 )

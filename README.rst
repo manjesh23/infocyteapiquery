@@ -68,6 +68,7 @@ How to use PowerShell Query?
     ... ($psvariable).name
     ... '''
     >>> psdata = ic.ps(cname, apikey, pscmd)
+    >>>
     >>> print(psdata)
     rdpwrap.dll
     calculator.exe
@@ -78,39 +79,10 @@ How to use PowerShell Query?
     python.exe
     cmd.exe
 
-Features
---------
+How to use API Query?
+--------------
 
-For ``apiquery``, create a list as below.
-
-``apiquery = ['AlertDetails','ArtifactDetails','ModuleDetails','ProcessDetails']``
-
-Loop:
-
-.. code-block:: Python
-
-    >>> for i in apiquery:
-         icdata = ic.query(cname=cname, apikey=apikey, apiquery=i)
-         print(icdata.head())
-         # Export to .xlsx or .db file
-
-Export data into excel file.
-
-.. code-block:: Python
-
-    with pd.ExcelWriter(cname + '.infocyte.xlsx') as writer:
-        icdata.to_excel(writer, sheet_name='Alerts')
-
-Export data into sqlite file.
-
-.. code-block:: Python
-
-    from sqlalchemy import create_engine
-    alerttab = "Alerts"
-    engine = create_engine('sqlite:///'+cname+'.infocyte.db', echo=False)
-    sqlite_connection = engine.connect()
-    icdata.to_sql(alerttab, sqlite_connection, if_exists='fail')
-    sqlite_connection.close()
+Please refer Wiki Section of Github for details. https://github.com/manjesh23/infocyteapiquery/wiki
 
 License
 -------
