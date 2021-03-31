@@ -83,7 +83,7 @@ How to use PowerShell Query?
 How to use API Query?
 --------------
 
-Please refer Wiki Section of Github for details. https://github.com/manjesh23/infocyteapiquery/wiki
+Please refer Wiki Section of Github for details. `Wiki here <https://github.com/manjesh23/infocyteapiquery/wiki>`_
 
 License
 -------
