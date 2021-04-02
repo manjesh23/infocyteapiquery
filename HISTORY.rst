@@ -49,3 +49,4 @@ History
 * tqdm module is requested, setup file is updated with version info and removed the setup_requirements.
 * Now Query function shows the progress bar.
 * Minor bug fixed in ps function (Omitted initial True --> Set-ICInstance (Output = True))
+* Added PowerShell (Encoded function), now it supports pipe and complex syntax
