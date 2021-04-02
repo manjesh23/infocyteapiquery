@@ -80,7 +80,37 @@ How to use PowerShell Query?
     python.exe
     cmd.exe
 
-How to use API Query?
+How to use Encoded PowerShell Query?
+--------------
+
+**Takes 3 arguments:**
+
+- ``cname --> Cloud Instance Name <cname.infocyte.com>``
+- ``apikey --> APIKEY or the API Token``
+- ``psecmd --> PowerShell Script Commands Support Pipe and Complex filters``
+
+.. code-block:: Python
+
+    >>> from infocyteapiquery import infocyteapiquery as ic
+    >>> cname = "m...n"
+    >>> apikey = "J8ARPa3iQR6...8HGUkElBBXra4mdEq"
+    >>> 
+    >>>psecmd = '$man = Get-ICAlert;($man).name|Sort-Object|Get-Unique'
+    >>> psedata = ic.pse(cname, apikey, psecmd)
+    >>>
+    >>> print(psedata)
+    BitComet_1.74_setup.exe
+    bitcomet_setup_EBTmD-1.exe
+    calc.exe
+    Calculator.exe
+    calculator.exe
+    Calculator.exe
+    ...
+    ...
+    cmd.exe
+    python.exe
+
+Query and PowerShell Tips & Tricks
 --------------
 
 Please refer Wiki Section of Github for details. `Wiki here <https://github.com/manjesh23/infocyteapiquery/wiki>`_
