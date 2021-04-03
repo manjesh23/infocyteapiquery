@@ -2,7 +2,6 @@
 Infocyte API Query
 ==================
 
-|Py-Versions|
 
 **Description:**
 ----------------
