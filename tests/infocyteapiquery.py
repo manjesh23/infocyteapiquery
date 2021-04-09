@@ -96,8 +96,8 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 # Test start
 
 
-cname = "${{env.cname}}"
-apikey = "${{env.apikey}}"
+cname = "${{secret.CNAME}}"
+apikey = "${{secret.APIKEY}}"
 apiquery = "AlertDetails"
 
 
