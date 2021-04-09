@@ -50,3 +50,9 @@ History
 * Now Query function shows the progress bar.
 * Minor bug fixed in ps function (Omitted initial True --> Set-ICInstance (Output = True))
 * Added PowerShell (Encoded function), now it supports pipe and complex syntax
+
+1.1.2(2021-03-31)
+------------------
+
+* Query function PyTest is setup and ready to use with new keys.
+* Pending PyTest for pscmd and psecmd
