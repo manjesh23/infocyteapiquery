@@ -3,7 +3,6 @@ wheel
 Sphinx
 twine
 
-os
 pandas
 tqdm
 paginateit

@@ -8,6 +8,7 @@ import pytest
 import requests
 import pandas as pd
 import json
+import os
 import subprocess
 from tqdm import tqdm
 
