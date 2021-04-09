@@ -2,7 +2,7 @@
 
 """Tests for `infocyteapiquery` package."""
 
-from passwords import cname, apikey, apiquery
+from dotenv import load_dotenv, find_dotenv
 import pytest
 
 # Import required modules
@@ -94,13 +94,18 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
         output = data.stdout.decode("utf-8")[6:]
     return(output)
 
+
 # Test start
 
-from passwords import cname, apikey, apiquery
+import os
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
-cname = cname
-apikey = apikey
-apiquery = apiquery
+
+cname = os.environ.get("cname")
+apikey = os.environ.get("apikey")
+apiquery = (os.environ.get("apiquery"))
+
 
 
 def test_query():
