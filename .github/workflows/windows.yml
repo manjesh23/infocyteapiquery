@@ -35,5 +35,7 @@ jobs:
       run: |
         pip install coverage
         python -m coverage run -m pytest -s tests
+        pip install pytest
+        pytest ./tests/test_infocyteapiquery.py
     - name: Upload Coverage to Codecov
       uses: codecov/codecov-action@v1
