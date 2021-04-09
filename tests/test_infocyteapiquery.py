@@ -4,10 +4,6 @@
 
 import pytest
 
-
-from infocyteapiquery import infocyteapiquery
-
-
 # Import required modules
 import requests
 import pandas as pd
@@ -29,7 +25,7 @@ This is API Query Function
 
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
     tqdm.pandas()
-    global icpd
+    global icpd, ic
     ic = requests.get("https://"+cname+".infocyte.com/api/" +
                       apiquery+"?access_token="+apikey + "&count=True")
     iccount = (str(ic.headers.get("X-Total-Count"))[:-3])
@@ -97,4 +93,14 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
         output = data.stdout.decode("utf-8")[6:]
     return(output)
 
-# EOF
+# Test start
+
+
+cname = ${{env.cname}}
+apikey = ${{env.apikey}}
+apiquery = "AlertDetails"
+
+
+def test_page():
+    query(cname, apikey, apiquery)
+    assert ic.status_code == 200

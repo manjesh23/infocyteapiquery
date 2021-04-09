@@ -1,5 +1,3 @@
-"""Unit test package for infocyteapiquery."""
-
 """Top-level package for infocyteapiquery."""
 
 from infocyteapiquery import infocyteapiquery
