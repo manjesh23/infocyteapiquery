@@ -2,7 +2,6 @@
 
 """Tests for `infocyteapiquery` package."""
 
-from dotenv import load_dotenv, find_dotenv
 import pytest
 
 # Import required modules
