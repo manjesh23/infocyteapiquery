@@ -6,7 +6,7 @@ twine
 pandas
 tqdm
 paginateit
-requests
+requests==2.25.1
 
 pytest
 pytest-runner
