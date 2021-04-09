@@ -97,7 +97,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 
 # Py_test start
-
+from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 
