@@ -97,7 +97,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 
 cname = "${{env.cname}}"
-apikey = "${{env.apikey}}""
+apikey = "${{env.apikey}}"
 apiquery = "AlertDetails"
 
 
