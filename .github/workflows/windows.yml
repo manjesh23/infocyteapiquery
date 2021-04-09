@@ -33,4 +33,4 @@ jobs:
         #python -m flake8 --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics windows_tools
     - name: Execute test
       run: |
-        pytest ./tests/test_infocyteapiquery.py
+        pytest ./tests/infocyteapiquery.py
