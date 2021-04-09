@@ -104,4 +104,5 @@ apiquery = "AlertDetails"
 
 def test_query():
     query(cname, apikey, apiquery)
+    os.environ['APIKEY']
     assert ic.status_code == 200
