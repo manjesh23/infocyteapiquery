@@ -84,7 +84,7 @@ celerybeat-schedule
 *.sage.py
 
 # dotenv | very imp
-.env
+tests/.env
 
 # virtualenv
 .venv
