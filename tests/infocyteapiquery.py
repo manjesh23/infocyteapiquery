@@ -2,6 +2,7 @@
 
 """Tests for `infocyteapiquery` package."""
 
+import os
 from dotenv import load_dotenv, find_dotenv
 import pytest
 
@@ -95,17 +96,14 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
     return(output)
 
 
-# Test start
+# Py_test start
 
-import os
-from dotenv import load_dotenv, find_dotenv
 load_dotenv(find_dotenv())
 
 
 cname = os.environ.get("cname")
 apikey = os.environ.get("apikey")
 apiquery = (os.environ.get("apiquery"))
-
 
 
 def test_query():
