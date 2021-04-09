@@ -5,7 +5,7 @@ twine
 
 pandas
 tqdm
-paginateit
+paginateit==0.1.1
 requests
 
 pytest
