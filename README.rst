@@ -22,7 +22,7 @@ Installation
 ``pip install --upgrade infocyteapiquery``
 
 How to use API Query?
---------------
+---------------------
 
 **Takes 3 arguments:**
 
@@ -50,7 +50,7 @@ How to use API Query?
     (dtype='object')
 
 How to use PowerShell Query?
---------------
+----------------------------
 
 **Takes 3 arguments:**
 
@@ -81,7 +81,7 @@ How to use PowerShell Query?
     cmd.exe
 
 How to use Encoded PowerShell Query?
---------------
+------------------------------------
 
 **Takes 3 arguments:**
 
@@ -111,7 +111,7 @@ How to use Encoded PowerShell Query?
     python.exe
 
 Query and PowerShell Tips & Tricks
---------------
+----------------------------------
 
 Please refer Wiki Section of Github for details. `Wiki here <https://github.com/manjesh23/infocyteapiquery/wiki>`_
 
