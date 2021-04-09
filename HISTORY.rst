@@ -55,4 +55,4 @@ History
 ------------------
 
 * Query function PyTest is setup and ready to use with new keys.
-* Pending PyTest for pscmd and psecmd
+* Pending PyTest for pscmd and psecmd.
