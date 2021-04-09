@@ -3,7 +3,7 @@ wheel
 Sphinx
 twine
 
-python-dotenv
+python-dotenv==0.17.0
 pandas
 tqdm
 paginateit
