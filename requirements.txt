@@ -3,6 +3,7 @@ wheel
 Sphinx
 twine
 
+passwords
 pandas
 tqdm
 paginateit

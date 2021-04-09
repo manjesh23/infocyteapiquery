@@ -2,6 +2,7 @@
 
 """Tests for `infocyteapiquery` package."""
 
+from passwords import cname, apikey, apiquery
 import pytest
 
 # Import required modules
@@ -95,13 +96,11 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 # Test start
 
+from passwords import cname, apikey, apiquery
 
-with open("test-secret.config", 'r') as w:
-    data = (w.read().replace('\n', ''))
-
-cname = data[8:22]
-apikey = data[32:96]
-apiquery = "AlertDetails"
+cname = cname
+apikey = apikey
+apiquery = apiquery
 
 
 def test_query():
