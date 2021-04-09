@@ -8,7 +8,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
+        os: [windows-latest]
         # Don't use pypy on windows since it does not have pywin32 module
         python-version: [3.6, 3.7, 3.8, 3.9]
 
