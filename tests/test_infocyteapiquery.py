@@ -96,11 +96,11 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 # Test start
 
 
-cname = ${{env.cname}}
-apikey = ${{env.apikey}}
+cname = "${{env.cname}}"
+apikey = "${{env.apikey}}""
 apiquery = "AlertDetails"
 
 
-def test_page():
+def test_query():
     query(cname, apikey, apiquery)
     assert ic.status_code == 200
