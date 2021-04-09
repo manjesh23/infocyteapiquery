@@ -8,7 +8,6 @@ import pytest
 import requests
 import pandas as pd
 import json
-import os
 import subprocess
 from tqdm import tqdm
 
@@ -97,12 +96,14 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 # Test start
 
 
-cname = "realtimedemo"
-apikey = "sEJ9fdLiL337L3NmAMtEIBEOdKIjrfe9uqydBYX35mFh3MBAyWGVt5aXuSLRVssU"
+with open("test-secret.config", 'r') as w:
+    data = (w.read().replace('\n', ''))
+
+cname = data[8:22]
+apikey = data[32:96]
 apiquery = "AlertDetails"
 
 
 def test_query():
     query(cname, apikey, apiquery)
-    os.environ['APIKEY']
     assert ic.status_code == 200
