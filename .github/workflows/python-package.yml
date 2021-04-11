@@ -38,5 +38,7 @@ jobs:
       run: |
         echo ${{ secrets.CNAME }} >> .env
         echo ${{ secrets.APIKEY }} >> .env
-        pytest ./tests/infocyteapiquery.py
+        ls -lah
+        cat .env
+        #pytest ./tests/infocyteapiquery.py
         
