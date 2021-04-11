@@ -98,8 +98,8 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 # Py_test start
 
-load_dotenv(find_dotenv())
-
+manjeshman = load_dotenv(find_dotenv())
+print(manjeshman)
 
 cname = os.environ.get("CNAME")
 apikey = os.environ.get("APIKEY")
