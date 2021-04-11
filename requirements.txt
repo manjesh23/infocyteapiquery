@@ -1,6 +1,6 @@
 pip
 wheel
-Sphinx
+Sphinx==3.5.4
 twine
 
 python-dotenv
