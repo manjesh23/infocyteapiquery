@@ -24,7 +24,6 @@ jobs:
         echo ${{ secrets.APIKEY }} >> .env
         #cp .env /home/runner/work/infocyteapiquery/infocyteapiquery/tests/
         ls -lah
-        cd tests
         pwd
         ls -lah
     - uses: actions/checkout@v2
