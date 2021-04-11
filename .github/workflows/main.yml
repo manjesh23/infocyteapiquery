@@ -27,5 +27,5 @@ jobs:
       run: |
         echo cname
         pwd
-        pytest ./tests/infocyteapiquery.py
+        
         
