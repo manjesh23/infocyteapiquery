@@ -101,8 +101,8 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 manjeshman = load_dotenv(find_dotenv())
 print(manjeshman)
 
-cname = "os.environ.get("CNAME")"
-apikey = "os.environ.get("APIKEY")"
+cname = str(os.environ.get("CNAME"))
+apikey = str(os.environ.get("APIKEY"))
 apiquery = "AlertDetails"
 
 
