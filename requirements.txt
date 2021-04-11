@@ -3,12 +3,10 @@ wheel
 Sphinx
 twine
 
-python-dotenv
 pandas
 tqdm
 paginateit
 requests
-subprocess
 
 pytest
 pytest-runner
