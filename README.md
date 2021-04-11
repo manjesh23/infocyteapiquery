@@ -12,6 +12,7 @@
 -   json
 -   subprocess
 -   tqdm
+-	paginateit
 
 ### Installation
 

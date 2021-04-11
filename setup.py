@@ -19,6 +19,7 @@ test_requirements = ['pytest>=3', ]
 setup(
     author="Manjesh N",
     author_email='manjesh_n@hotmail.com',
+    long_description_content_type='text/markdown',
     python_requires='>=3.6',
     package_dir={'': '.'},
     classifiers=[
@@ -46,6 +47,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/manjesh23/infocyteapiquery',
-    version='1.1.3',
+    version='1.1.4',
     zip_safe=False,
 )
