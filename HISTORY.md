@@ -46,3 +46,8 @@
 
 * Query function PyTest is setup and ready to use with new keys.
 * Pending PyTest for pscmd and psecmd.
+
+## 1.1.3(2021-04-11)
+
+* Converted all the .rst files to .md
+* No code changes added to commit
