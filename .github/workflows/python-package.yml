@@ -36,9 +36,8 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        echo ${{ secrets.CNAME }} >> .env
-        echo ${{ secrets.APIKEY }} >> .env
-        ls -lah
-        cat .env
+        env: 
+          API_key: ${{ secrets.CNAME }}
+          API_secretkey: ${{ secrets.APIKEY }}
         #pytest ./tests/infocyteapiquery.py
         
