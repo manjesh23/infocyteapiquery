@@ -1,6 +1,4 @@
-=====
-Usage
-=====
+# Usage
 
 To use infocyteapiquery in a project::
 
