@@ -27,7 +27,7 @@ jobs:
       run: |
         echo cname
         echo ${{ secrets.CNAME }}
-        ping 4.2.2.2
+        ping 4.2.2.2 -n 2
         uptime
         pwd
         
