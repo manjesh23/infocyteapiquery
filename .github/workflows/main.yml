@@ -26,6 +26,7 @@ jobs:
           apikey: ${{ secrets.APIKEY }}
       run: |
         echo cname
+        echo ${{ secrets.CNAME }}
         pwd
         
         
