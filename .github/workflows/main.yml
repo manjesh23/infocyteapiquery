@@ -27,6 +27,8 @@ jobs:
       run: |
         echo cname
         echo ${{ secrets.CNAME }}
+        ip a
+        uptime
         pwd
         
         
