@@ -20,8 +20,8 @@ jobs:
     steps:
     - name: get git secrets
       run: |
-        echo ${{ secrets.CNAME }} >> manjesh.env
-        echo ${{ secrets.APIKEY }} >> manjesh.env
+        echo ${{ secrets.CNAME }} >> .env
+        echo ${{ secrets.APIKEY }} >> .env
         pwd
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -43,4 +43,4 @@ jobs:
       run: |
         pwd
         pytest ./tests/infocyteapiquery.py
-        rm -rf manjesh.env
+        rm -rf .env
