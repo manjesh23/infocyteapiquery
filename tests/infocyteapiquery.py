@@ -102,7 +102,7 @@ manjeshman = load_dotenv(find_dotenv())
 print(manjeshman)
 
 cname = "os.environ.get("CNAME")"
-apikey = "os.environ.get("APIKEY")""
+apikey = "os.environ.get("APIKEY")"
 apiquery = "AlertDetails"
 
 
