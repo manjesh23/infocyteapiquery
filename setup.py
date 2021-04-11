@@ -19,7 +19,6 @@ test_requirements = ['pytest>=3', ]
 setup(
     author="Manjesh N",
     author_email='manjesh_n@hotmail.com',
-    long_description_content_type='text/markdown',
     python_requires='>=3.6',
     package_dir={'': '.'},
     classifiers=[
@@ -39,6 +38,7 @@ setup(
     install_requires=requirements,
     license="Apache Software License 2.0",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     include_package_data=True,
     keywords='infocyteapiquery',
     name='infocyteapiquery',
