@@ -22,7 +22,7 @@ jobs:
       run: |
         echo ${{ secrets.CNAME }} >> .env
         echo ${{ secrets.APIKEY }} >> .env
-        cp .env /home/runner/work/infocyteapiquery/infocyteapiquery/tests
+        cp .env /home/runner/work/infocyteapiquery/infocyteapiquery/tests/
         cd tests
         pwd
         ls -lah
