@@ -9,7 +9,6 @@
 * Basic code and local test.
 
 ## 0.0.6(2021-01-24)
-------------------
 
 * Finalized module with dependencies | tested locally using wheel.
 
@@ -22,7 +21,6 @@
 * Integrated with Travis and updated the package to ship.
 
 ## 1.0.34(2021-03-18)
-------------------
 
 * First release on PyPI.
 

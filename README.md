@@ -41,7 +41,6 @@
 		(dtype='object')
 
 ### How to use PowerShell Query?
-----------------------------
 
 #### Takes 3 arguments:
 
@@ -70,7 +69,6 @@
 		cmd.exe
 
 ### How to use Encoded PowerShell Query?
-------------------------------------
 
 #### Takes 3 arguments:
 
