@@ -12,6 +12,7 @@ import subprocess
 from tqdm import tqdm
 import os
 from dotenv import load_dotenv, find_dotenv
+from paginateit import paginateit as pg
 
 # Set pandas to show full rows and columns
 pd.set_option('display.max_rows', None)
@@ -98,7 +99,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 # Py_test start
 
-manjeshman = load_dotenv(find_dotenv("manjesh.env"))
+load_dotenv(find_dotenv())
 
 cname = os.environ.get("CNAME")
 apikey = os.environ.get("APIKEY")
