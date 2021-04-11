@@ -98,11 +98,10 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 # Py_test start
 
-manjeshman = load_dotenv(find_dotenv())
-print(manjeshman)
+manjeshman = load_dotenv(find_dotenv("manjesh.env"))
 
-cname = str(os.environ.get("CNAME"))
-apikey = str(os.environ.get("APIKEY"))
+cname = os.environ.get("CNAME")
+apikey = os.environ.get("APIKEY")
 apiquery = "AlertDetails"
 
 
