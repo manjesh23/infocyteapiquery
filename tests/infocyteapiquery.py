@@ -10,6 +10,8 @@ import pandas as pd
 import json
 import subprocess
 from tqdm import tqdm
+import os
+from dotenv import load_dotenv, find_dotenv
 
 # Set pandas to show full rows and columns
 pd.set_option('display.max_rows', None)
@@ -96,10 +98,12 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 # Py_test start
 
+load_dotenv(find_dotenv())
 
-cname =
-apikey =
-apiquery =
+
+cname = os.environ.get("CNAME")
+apikey = os.environ.get("APIKEY")
+apiquery = "AlertDetails"
 
 
 def test_query():
