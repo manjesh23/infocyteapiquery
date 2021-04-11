@@ -40,5 +40,5 @@ jobs:
           apikey: ${{ secrets.APIKEY }}
       run: |
         pwd
-        #pytest ./tests/infocyteapiquery.py
+        pytest ./tests/infocyteapiquery.py
         
