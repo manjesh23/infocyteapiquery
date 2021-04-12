@@ -42,7 +42,7 @@
 		>>> apiquery = "AlertDetails"
 		>>>
 		>>> icdata = ic.query(cname=cname, apikey=apikey, apiquery=apiquery)
-		Loading AlertDetails
+		Loading AlertDetails:  22%|████████████▉                                              | 2/9 Loop(s)
 		>>>
 		>>> icdata.shape
 		(183, 37)
@@ -68,6 +68,7 @@
 		... ($psvariable).name
 		... '''
 		>>> psdata = ic.ps(cname, apikey, pscmd)
+		Loading AlertDetails:   100%|██████████████████████████████████████████████████████████ | 1/1 Loop(s)
 		>>>
 		>>> print(psdata)
 		rdpwrap.dll
