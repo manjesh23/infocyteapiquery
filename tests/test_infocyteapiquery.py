@@ -101,8 +101,8 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
 
 load_dotenv(find_dotenv())
 
-cname = os.environ.get("CNAME")
-apikey = os.environ.get("APIKEY")
+cname = cname
+apikey = apikey
 apiquery = "AlertDetails"
 
 
