@@ -111,4 +111,4 @@ def test_query():
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
     query(cname, apikey, apiquery)
-    assert ic.status_code == 201
+    assert ic.status_code == 200
