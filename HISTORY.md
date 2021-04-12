@@ -50,7 +50,7 @@
 * Converted all the .rst files to .md
 * No code changes added to commit
 
-## 1.1.7(2021-04-12)
+## 1.1.8(2021-04-12)
 
 * Updated README file with loading bar support
 * Using infocyteapiquery for pytest support (ic global variable defaults)
