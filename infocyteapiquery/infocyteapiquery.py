@@ -19,7 +19,7 @@ This is API Query Function
 
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
     tqdm.pandas()
-    global icpd
+    global icpd, ic
     ic = requests.get("https://"+cname+".infocyte.com/api/" +
                       apiquery+"?access_token="+apikey + "&count=True")
     iccount = (str(ic.headers.get("X-Total-Count"))[:-3])
