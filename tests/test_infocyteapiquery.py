@@ -5,6 +5,7 @@
 import pytest
 
 # Import required modules
+from infocyteapiquery import infocyteapiquery as ic
 import requests
 import pandas as pd
 import json
@@ -25,7 +26,7 @@ This is API Query Function
 '''
 # Main function
 
-
+'''
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
     tqdm.pandas()
     global icpd, ic
@@ -95,7 +96,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
             ["powershell.exe", "-encoded", eoutcome], capture_output=True)
         output = data.stdout.decode("utf-8")[6:]
     return(output)
-
+'''
 
 # Py_test start
 
@@ -110,5 +111,5 @@ def test_query():
     load_dotenv(find_dotenv("manjesh.env"))
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
-    query(cname, apikey, apiquery)
-    assert ic.status_code == 200
+    ic.query(cname, apikey, apiquery)
+    assert icd.status_code == 200
