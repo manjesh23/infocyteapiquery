@@ -42,7 +42,7 @@
 		>>> apiquery = "AlertDetails"
 		>>>
 		>>> icdata = ic.query(cname=cname, apikey=apikey, apiquery=apiquery)
-		Loading AlertDetails:  22%|████████████████                                             | 2/9 Loop(s)
+		Loading AlertDetails:  100%|██████████████████████████████████████████████████████████ | 9/9 Loop(s)
 		>>>
 		>>> icdata.shape
 		(183, 37)
