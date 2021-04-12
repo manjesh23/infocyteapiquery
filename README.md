@@ -39,13 +39,13 @@
 		>>> from infocyteapiquery import infocyteapiquery as ic
 		>>> cname = "m...n"
 		>>> apikey = "J8ARPa3iQR6...8HGUkElBBXra4mdEq"
-		>>> apiquery = "AlertDetails"
+		>>> apiquery = "ModuleDetails"
 		>>>
-		>>> icdata = ic.query(cname=cname, apikey=apikey, apiquery=apiquery)
-		Loading AlertDetails:  100%|█████████████████████████████████████████████████████████████ | 9/9 Loop(s)
+		>>> icdata = ic.query(cname, apikey, apiquery)
+		Loading ModuleDetails:  100%|█████████████████████████████████████████████████████████████ | 9/9 Loop(s)
 		>>>
 		>>> icdata.shape
-		(183, 37)
+		(9183, 37)
 		>>>
 		>>> icdata.columns
 		Index(['flagId', 'flagColor', 'flagName', 'flagWeight', 'threatScore', 'threatWeight', 'threatName', 'avPositives', 'avTotal', 'hasAvScan', 'synapse', 'dynamicAnalysis', 'malicious', 'suspicious', 'staticAnalysis', 'whitelist', 'blacklist', 'localBlacklist', 'localWhitelist', 'unknown', 'notMalicious', 'targetId', 'size', 'extensionId', 'extensionVersionId', 'id', 'name', 'type', 'hostname', 'itemId', 'hostScanId', 'scanId', 'fileRepId', 'signed', 'managed', 'createdOn', 'archived'
