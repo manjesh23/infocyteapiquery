@@ -10,7 +10,6 @@ import pandas as pd
 import json
 import subprocess
 from tqdm import tqdm
-from infocyteapiquery import infocyteapiquery as ic
 import os
 from dotenv import load_dotenv, find_dotenv
 from paginateit import paginateit as pg
@@ -26,7 +25,7 @@ This is API Query Function
 '''
 # Main function
 
-"""
+
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
     tqdm.pandas()
     global icpd, ic
@@ -96,7 +95,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
             ["powershell.exe", "-encoded", eoutcome], capture_output=True)
         output = data.stdout.decode("utf-8")[6:]
     return(output)
-"""
+
 
 # Py_test start
 
