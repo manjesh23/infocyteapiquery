@@ -4,7 +4,7 @@ Sphinx
 twine
 
 python-dotenv
-pandas
+pandas==1.2.4
 tqdm
 paginateit
 requests
