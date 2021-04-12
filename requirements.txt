@@ -3,7 +3,7 @@ wheel
 Sphinx
 twine
 
-dotenv
+dotenv==0.0.5
 pandas
 tqdm
 paginateit
