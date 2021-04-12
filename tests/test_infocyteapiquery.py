@@ -10,6 +10,7 @@ import pandas as pd
 import json
 import subprocess
 from tqdm import tqdm
+from infocyteapiquery import infocyteapiquery as ic
 import os
 from dotenv import load_dotenv, find_dotenv
 from paginateit import paginateit as pg
@@ -110,5 +111,5 @@ def test_query():
     load_dotenv(find_dotenv("manjesh.env"))
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
-    query(cname, apikey, apiquery)
+    ic.query(cname, apikey, apiquery)
     assert ic.status_code == 200
