@@ -62,9 +62,8 @@ def query(cname="cname", apikey="apikey", apiquery="apiquery"):
     return icpd
 
 
-'''
+
 This is PowerShell Function
-'''
 
 
 def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
@@ -78,9 +77,7 @@ def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
     return(outcome)
 
 
-'''
 This is PowerShell base64-Encoded Funcation
-'''
 
 
 def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
