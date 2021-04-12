@@ -1,6 +1,9 @@
 # Infocyte API Query
 
-[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![PyPI version fury.io](https://badge.fury.io/py/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/) [![PyPI license](https://img.shields.io/pypi/l/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/)
+[![made-with-python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/) [![PyPI version fury.io](https://badge.fury.io/py/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/) [![PyPI license](https://img.shields.io/pypi/l/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/manjesh23/infocyteapiquery/graphs/commit-activity) [![Python package pytest](https://github.com/manjesh23/infocyteapiquery/actions/workflows/main.yml/badge.svg)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/main.yml)
+
+
+
 
 ## Description:
 #### Python module | Used to get API data from Infocyte Cloud Instances into the pandas DataFrame | Defaults to 90 days
