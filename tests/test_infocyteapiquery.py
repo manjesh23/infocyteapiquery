@@ -21,7 +21,7 @@ apiquery = "AlertDetails"
 
 def test_query():
     #load_dotenv(find_dotenv("manjesh.env"))
-    cname = os.getenv("cname")
-    apikey = os.getenv("apikey")
+    #cname = os.getenv("cname")
+    #apikey = os.getenv("apikey")
     ic.query(cname, apikey, apiquery)
     assert ic.icd.status_code == 200
