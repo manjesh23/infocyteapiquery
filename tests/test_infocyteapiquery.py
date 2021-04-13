@@ -20,7 +20,7 @@ apiquery = "AlertDetails"
 
 
 def test_query():
-    load_dotenv(find_dotenv("manjesh.env"))
+    #load_dotenv(find_dotenv("manjesh.env"))
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
     ic.query(cname, apikey, apiquery)
