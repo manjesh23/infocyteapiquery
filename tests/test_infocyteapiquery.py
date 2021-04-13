@@ -7,7 +7,6 @@ import pytest
 # Import required modules
 from infocyteapiquery import infocyteapiquery as ic
 import os
-#from dotenv import load_dotenv, find_dotenv
 from paginateit import paginateit as pg
 
 # Py_test start
