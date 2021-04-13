@@ -12,10 +12,10 @@ from paginateit import paginateit as pg
 
 # Py_test start
 
-load_dotenv(find_dotenv())
+#load_dotenv(find_dotenv())
 
-cname = os.environ.get("CNAME")
-apikey = os.environ.get("APIKEY")
+#cname = os.environ.get("CNAME")
+#apikey = os.environ.get("APIKEY")
 apiquery = "AlertDetails"
 
 
