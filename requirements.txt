@@ -3,7 +3,7 @@ wheel
 Sphinx
 twine
 
-python-dotenv
+#python-dotenv
 pandas
 tqdm
 paginateit
