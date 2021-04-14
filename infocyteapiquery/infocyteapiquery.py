@@ -46,9 +46,8 @@ def query(cname="cname", apikey="apikey", apiquery="apiquery"):
                 icdata = json.loads(loopic.text)
                 icdb = pd.DataFrame(icdata)
                 icpd = icpd.append(icdb, ignore_index=True)
-    mask = icpd.astype(str).apply(
-        lambda x: x.str.match(r'(\d{2,4}-\d{2}-\d{2,4})+').all())
-    icpd.loc[:, mask] = icpd.loc[:, mask].apply(pd.to_datetime)
+    #mask = icpd.astype(str).apply(lambda x: x.str.match(r'(\d{2,4}-\d{2}-\d{2,4})+').all())
+    #icpd.loc[:, mask] = icpd.loc[:, mask].apply(pd.to_datetime)
     return icpd
 
 
