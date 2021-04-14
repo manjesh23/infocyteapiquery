@@ -48,7 +48,9 @@
 		(9183, 37)
 		>>>
 		>>> icdata.columns
-		Index(['flagId', 'flagColor', 'flagName', 'flagWeight', 'threatScore', 'threatWeight', 'threatName', 'avPositives', 'avTotal', 'hasAvScan', 'synapse', 'dynamicAnalysis', 'malicious', 'suspicious', 'staticAnalysis', 'whitelist', 'blacklist', 'localBlacklist', 'localWhitelist', 'unknown', 'notMalicious', 'targetId', 'size', 'extensionId', 'extensionVersionId', 'id', 'name', 'type', 'hostname', 'itemId', 'hostScanId', 'scanId', 'fileRepId', 'signed', 'managed', 'createdOn', 'archived'
+		Index(['size', 'signatureType', 'serialNumber', 'subjectName', 'issuerName', 'timestampIssuer', 'timestampSubject', 'id', 'fileRepId', 'staticAnalysis', 'dynamicAnalysis', 'localBlacklist', 'localWhitelist', 'blacklist', 'whitelist',
+       'malicious', 'notMalicious', 'suspicious', 'unknown', 'threatScore', 'threatName', 'threatWeight', 'compromised', 'failed', 'hasAvScan', 'avPositives', 'avTotal', 'synapse', 'flagId', 'flagName', 'flagColor', 'flagWeight',
+       'name', 'path', 'managed', 'signed', 'md5', 'sha1', 'sha256', 'ssdeep'],
 		(dtype='object')
 
 ### How to use PowerShell Query?
@@ -68,7 +70,7 @@
 		... ($psvariable).name
 		... '''
 		>>> psdata = ic.ps(cname, apikey, pscmd)
-		Loading AlertDetails:   100%|████████████████████████████████████████████████████████████ | 1/1 Loop(s)
+		Loading AlertDetails:   100%|█████████████████████████████████████████████████████████████ | 1/1 Loop(s)
 		>>>
 		>>> print(psdata)
 		rdpwrap.dll
