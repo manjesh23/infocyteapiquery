@@ -57,4 +57,4 @@
 
 ## 1.1.9(2021-04-15)
 
-* Restored datetime format to pandas default (This was an error while exporing data to excel and .db)
+* Restored datetime format to pandas default (This was an error while exporting data to excel and .db)
