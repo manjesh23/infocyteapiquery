@@ -54,3 +54,7 @@
 
 * Updated README file with loading bar support
 * Using infocyteapiquery for pytest support (ic global variable defaults)
+
+## 1.1.9(2021-04-15)
+
+* Restored datetime format to pandas default (This was an error while exporing data to excel and .db)
