@@ -1,4 +1,4 @@
-name: Python package pytest on Windows
+name: Pytest on Windows
 
 on:
   push:
