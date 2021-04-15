@@ -1,4 +1,4 @@
-name: Python package pytest on Ubuntu
+name: Pytest on Ubuntu
 
 on:
   push:
