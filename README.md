@@ -6,6 +6,7 @@
 [![PyPI license](https://img.shields.io/pypi/l/infocyteapiquery.svg)](https://pypi.python.org/pypi/infocyteapiquery/)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/manjesh23/infocyteapiquery/graphs/commit-activity)
 [![Python package pytest](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest.yml/badge.svg)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest.yml)
+[![Python package pytest on Windows](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest_win.yml/badge.svg)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest_win.yml)
 
 
 
