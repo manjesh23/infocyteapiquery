@@ -109,6 +109,8 @@
 	    cmd.exe
 	    python.exe
 
+## Note: PowerShell output is extracted in string format (Refer PowerShell "ConvertTo" feature for more details)
+
 ### Query and PowerShell Tips & Tricks
 
 Please refer Wiki Section of Github for details. [Wiki here](https://github.com/manjesh23/infocyteapiquery/wiki)
