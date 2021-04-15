@@ -4,6 +4,7 @@ import pandas as pd
 import json
 import subprocess
 from tqdm import tqdm
+import re
 
 # Set pandas to show full rows and columns
 pd.set_option('display.max_rows', None)
