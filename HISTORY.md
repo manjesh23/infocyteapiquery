@@ -14,7 +14,7 @@
 
 ## 0.1.1(2021-02-18)
 
-* Added all the dependencies | sdist & bdist ready
+* Added all the dependencies | sdist & bdist ready.
 
 ## 1.0.1(2021-03-17)
 
@@ -27,18 +27,18 @@
 ## 1.0.35(2021-03-18)
 
 * Updated README file with export examples to xlsx and db file.
-* Second release on PyPI
+* Second release on PyPI.
 
 ## 1.0.36(2021-03-27)
 
-* Added PowerShell data pull capabilities
+* Added PowerShell data pull capabilities.
 
 ## 1.1.1(2021-03-31)
 
 * tqdm module is requested, setup file is updated with version info and removed the setup_requirements.
 * Now Query function shows the progress bar.
-* Minor bug fixed in ps function (Omitted initial True --> Set-ICInstance (Output = True))
-* Added PowerShell (Encoded function), now it supports pipe and complex syntax
+* Minor bug fixed in ps function (Omitted initial True --> Set-ICInstance (Output = True)).
+* Added PowerShell (Encoded function), now it supports pipe and complex syntax.
 
 ## 1.1.2(2021-03-31)
 
@@ -48,18 +48,19 @@
 ## 1.1.6(2021-04-11)
 
 * Converted all the .rst files to .md
-* No code changes added to commit
+* No code changes added to commit.
 
 ## 1.1.8(2021-04-12)
 
-* Updated README file with loading bar support
-* Using infocyteapiquery for pytest support (ic global variable defaults)
+* Updated README file with loading bar support.
+* Using infocyteapiquery for pytest support (ic global variable defaults).
 
 ## 1.1.9(2021-04-15)
 
-* Restored datetime format to pandas default (This was an error while exporting data to excel and .db)
+* Restored datetime format to pandas default (This was an error while exporting data to excel and .db).
 
 ## 1.1.10(2021-04-15)
 
-* Module can now handle error in better way (Detailed error displayed if failed)
-* Updated pypi keyword to match more accurate while searching
+* Module can now handle error in better way (Detailed error displayed if failed).
+* PowerShell bug fix.
+* Updated pypi keyword to match more accurate while searching.
