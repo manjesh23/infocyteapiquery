@@ -17,12 +17,13 @@
 ### Required Modules (Installed as prerequisite)
 
 
--   requests
--   pandas
+-   requests (Addition)
+-   pandas (Addition)
 -   json
 -   subprocess
--   tqdm
--	paginateit
+-   tqdm (Addition)
+- 	re
+-	paginateit (Addition)
 
 ### Installation
 
