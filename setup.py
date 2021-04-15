@@ -40,7 +40,7 @@ setup(
     long_description=readme,
     long_description_content_type='text/markdown',
     include_package_data=True,
-    keywords='infocyteapiquery', "infocyte", "infocyteapi", "infocytequery",
+    keywords='infocyteapiquery', 'infocyte', 'infocyteapi', 'infocytequery',
     name='infocyteapiquery',
     packages=["infocyteapiquery"],
     # setup_requires=setup_requirements,
