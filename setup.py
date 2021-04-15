@@ -19,6 +19,7 @@ test_requirements = ['pytest>=3', ]
 setup(
     author="Manjesh N",
     author_email='manjesh_n@hotmail.com',
+    name='infocyteapiquery',
     python_requires='>=3.6',
     package_dir={'': '.'},
     classifiers=[
@@ -40,8 +41,7 @@ setup(
     long_description=readme,
     long_description_content_type='text/markdown',
     include_package_data=True,
-    keywords='infocyteapiquery'
-    name='infocyteapiquery',
+    keywords=['infocyteapiquery', 'infocyte'],
     packages=["infocyteapiquery"],
     # setup_requires=setup_requirements,
     test_suite='tests',
