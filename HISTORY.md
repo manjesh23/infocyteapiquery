@@ -59,7 +59,7 @@
 
 * Restored datetime format to pandas default (This was an error while exporting data to excel and .db).
 
-## 1.1.10(2021-04-15)
+## 1.1.10(2021-04-16)
 
 * Module can now handle error in better way (Detailed error displayed if failed).
 * PowerShell bug fix.
