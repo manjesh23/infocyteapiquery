@@ -109,7 +109,7 @@
 	    cmd.exe
 	    python.exe
 
-## Note: PowerShell output is extracted in string format (Refer PowerShell "ConvertTo" feature for more details)
+### Note: PowerShell output is extracted in string format (Refer PowerShell "ConvertTo" feature for more details)
 
 ### Query and PowerShell Tips & Tricks
 
