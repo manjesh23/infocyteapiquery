@@ -58,3 +58,8 @@
 ## 1.1.9(2021-04-15)
 
 * Restored datetime format to pandas default (This was an error while exporting data to excel and .db)
+
+## 1.1.10(2021-04-15)
+
+* Module can now handle error in better way (Detailed error displayed if failed)
+* Updated pypi keyword to match more accurate while searching
