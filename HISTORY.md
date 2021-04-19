@@ -67,3 +67,6 @@
 
 ## 1.1.11(2021-04-19)
 * Encoded PowerShell bug fix.
+
+## 1.1.11(2021-04-20)
+* Pytest added for ps function
