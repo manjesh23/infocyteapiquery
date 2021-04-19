@@ -8,6 +8,7 @@ import pytest
 from infocyteapiquery import infocyteapiquery as ic
 import os
 from paginateit import paginateit as pg
+import re
 
 # Py_test start
 
