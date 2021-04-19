@@ -18,4 +18,4 @@ def test_ps():
     pscmd = "$psvariable = Get-ICAlert\n($psvariable).name\n"
     pstest = ic.ps(cname, apikey, pscmd)
     #assert re.search('exe|dll', pstest)
-    assert 'dll' in str(pstest)
+    assert bool(pstest) == True
