@@ -64,3 +64,6 @@
 * Module can now handle error in better way (Detailed error displayed if failed).
 * PowerShell bug fix.
 * Updated pypi keyword to match more accurate while searching.
+
+## 1.1.11(2021-04-19)
+* Encoded PowerShell bug fix.
