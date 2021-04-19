@@ -13,10 +13,8 @@ import re
 # Py_test start
 
 def test_ps():
-    #cname = os.getenv("cname")
-    #apikey = os.getenv("apikey")
-    cname = "manjeshlan"
-    apikey = "TvozHxIjZwGxDzj1aoivDRT33wEfVWCsFLraqJUPnpp3fDkAOHjwYDYJK2BLqNd5"
+    cname = os.getenv("cname")
+    apikey = os.getenv("apikey")
     pscmd = "$psvariable = Get-ICAlert\n($psvariable).name\n"
     pstest = ic.ps(cname, apikey, pscmd)
     #assert re.search('exe|dll', pstest)
