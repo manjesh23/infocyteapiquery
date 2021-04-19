@@ -72,7 +72,7 @@ def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
     pscmd = pscmd.replace('\n', ';')
     for line in tqdm(pscmd.splitlines(), desc="Loading ", ncols=100, unit='Line(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='BLUE'):
         raw = subprocess.run(
-            ["powershell.exe", "-Command", key + line], capture_output=True)
+            ["powershell.exe", "-Command", key + line], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         outcome = raw.stdout.decode("utf-8")
         outcome = re.sub('(True)\r\n', '', outcome)
     return(outcome)
@@ -93,7 +93,7 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
         raw = subprocess.run(["powershell.exe", line], capture_output=True)
         eoutcome = raw.stdout.decode("utf-8")
         data = subprocess.run(
-            ["powershell.exe", "-encoded", eoutcome], capture_output=True)
+            ["powershell.exe", "-encoded", eoutcome], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         output = data.stdout.decode("utf-8")[6:]
         output = re.sub('(True)\r\n', '', output)
     return(output)
