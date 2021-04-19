@@ -20,11 +20,11 @@
 
 -   requests (Addition)
 -   pandas (Addition)
+-	paginateit (Addition)
+-   tqdm (Addition)
 -   json
 -   subprocess
--   tqdm (Addition)
 - 	re
--	paginateit (Addition)
 
 ### Installation
 
