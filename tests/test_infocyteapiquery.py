@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Tests for `infocyteapiquery` package."""
+"""Tests for `infocyteapiquery` package (Only for ic.query function)."""
 
 import pytest
 
@@ -12,7 +12,6 @@ from paginateit import paginateit as pg
 # Py_test start
 
 apiquery = "AlertDetails"
-pscmd = "$psvariable = Get-ICAlert\n($psvariable).name\n"
 
 
 def test_query():
