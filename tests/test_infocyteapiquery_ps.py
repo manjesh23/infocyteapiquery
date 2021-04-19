@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""Tests for `infocyteapiquery` package (For ps and ps encoded)."""
+"""Tests for `infocyteapiquery` package (For ps and ps encoded function)."""
 
 import pytest
 
