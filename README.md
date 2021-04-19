@@ -98,6 +98,7 @@
 	    >>> 
 	    >>>psecmd = '$man = Get-ICAlert;($man).name|Sort-Object|Get-Unique'
 	    >>> psedata = ic.pse(cname, apikey, psecmd)
+		Loading : 100%|███████████████████████████████████████████████████████████████████████ | 1/1 Line(s)
 	    >>>
 	    >>> print(psedata)
 	    BitComet_1.74_setup.exe
