@@ -12,6 +12,7 @@ from paginateit import paginateit as pg
 # Py_test start
 
 apiquery = "AlertDetails"
+pscmd = "$psvariable = Get-ICAlert\n($psvariable).name\n"
 
 
 def test_query():
@@ -19,3 +20,10 @@ def test_query():
     apikey = os.getenv("apikey")
     ic.query(cname, apikey, apiquery)
     assert ic.icd.status_code == 200
+
+
+def test_ps():
+    cname = os.getenv("cname")
+    apikey = os.getenv("apikey")
+    pstest = ic.ps(cname, apikey, pscmd)
+    assert re.search('exe|dll', pstest)
