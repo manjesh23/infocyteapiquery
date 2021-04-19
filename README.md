@@ -72,7 +72,7 @@
 		... ($psvariable).name
 		... '''
 		>>> psdata = ic.ps(cname, apikey, pscmd)
-		Loading AlertDetails:   100%|█████████████████████████████████████████████████████████████ | 1/1 Loop(s)
+		Loading : 100%|███████████████████████████████████████████████████████████████████████ | 1/1 Line(s)
 		>>>
 		>>> print(psdata)
 		rdpwrap.dll
