@@ -7,8 +7,6 @@ import pytest
 # Import required modules
 from infocyteapiquery import infocyteapiquery as ic
 import os
-import re
-dir(ic)
 
 
 # Py_test start
