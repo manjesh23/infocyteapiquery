@@ -12,10 +12,15 @@ import re
 
 # Py_test start
 
+pscmd = '''
+$psvariable = Get-ICAlert
+($psvariable).name
+'''
+
+
 def test_ps():
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
-    pscmd = "$psvariable = Get-ICAlert\n($psvariable).name\n"
     ic.ps(cname, apikey, pscmd)
     #assert re.search('exe|dll', ic.psout)
     assert bool(ic.psout) == True
