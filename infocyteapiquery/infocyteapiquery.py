@@ -67,15 +67,16 @@ This is PowerShell Function
 
 
 def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
+    global psout, psoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
     pscmd = pscmd.replace('\n', ';')
     for line in tqdm(pscmd.splitlines(), desc="Loading ", ncols=100, unit='Line(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='BLUE'):
         raw = subprocess.run(
             ["powershell.exe", "-Command", key + line], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        outcome = raw.stdout.decode("utf-8")
-        outcome = re.sub('(True)\r\n', '', outcome)
-    return(outcome)
+        psoutput = raw.stdout.decode("utf-8")
+        psout = re.sub('(True)\r\n', '', psoutput)
+    return(psout)
 
 
 '''
@@ -84,6 +85,7 @@ This is PowerShell base64-Encoded Funcation
 
 
 def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
+    global pseout, pseoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
     psecmd = psecmd.replace('\n', ';')
@@ -94,8 +96,8 @@ def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
         eoutcome = raw.stdout.decode("utf-8")
         data = subprocess.run(
             ["powershell.exe", "-encoded", eoutcome], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        output = data.stdout.decode("utf-8")[6:]
-        output = re.sub('(True)\r\n', '', output)
-    return(output)
+        pseoutput = data.stdout.decode("utf-8")[6:]
+        pseout = re.sub('(True)\r\n', '', pseoutput)
+    return(pseout)
 
 # EOF

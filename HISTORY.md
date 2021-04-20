@@ -68,5 +68,9 @@
 ## 1.1.11(2021-04-19)
 * Encoded PowerShell bug fix.
 
-## 1.1.11(2021-04-20)
+## 1.1.13(2021-04-20)
 * Pytest added for ps function
+
+## 1.1.14(2021-04-20)
+* Exposing ps and pse variables for pytest purpose and to see subprocess raw output.
+
