@@ -8,6 +8,7 @@ import pytest
 from infocyteapiquery import infocyteapiquery as ic
 import os
 import re
+dir(ic)
 
 
 # Py_test start
@@ -22,5 +23,5 @@ def test_ps():
     cname = os.getenv("cname")
     apikey = os.getenv("apikey")
     ic.ps(cname, apikey, pscmd)
-    #assert re.search('exe|dll', ic.psout)
-    assert bool(ic.psoutput) == False
+    assert re.search('exe|dll', ic.psout)
+    #assert bool(ic.psoutput) == False
