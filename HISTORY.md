@@ -74,3 +74,7 @@
 ## 1.1.14(2021-04-20)
 * Exposing ps and pse variables for pytest purpose and to see subprocess raw output.
 
+## 1.1.15(2021-04-20)
+* Exposed few more ps and pse variables
+* Pytest for both ps and pse functions
+* Fixed minor bug with pse module

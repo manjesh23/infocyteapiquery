@@ -67,14 +67,14 @@ This is PowerShell Function
 
 
 def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
-    global psout, psoutput
+    global psout, psraw, psoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
     pscmd = pscmd.replace('\n', ';')
     for line in tqdm(pscmd.splitlines(), desc="Loading ", ncols=100, unit='Line(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='BLUE'):
-        raw = subprocess.run(
+        psraw = subprocess.run(
             ["powershell.exe", "-Command", key + line], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        psoutput = raw.stdout.decode("utf-8")
+        psoutput = psraw.stdout.decode("utf-8")
         psout = re.sub('(True)\r\n', '', psoutput)
     return(psout)
 
@@ -85,15 +85,16 @@ This is PowerShell base64-Encoded Funcation
 
 
 def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
-    global pseout, pseoutput
+    global pseout, pseraw, pseoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
     psecmd = psecmd.replace('\n', ';')
     etext = ("$pt=\'" + key+psecmd +
              "\';$enc = [convert]::ToBase64String([System.Text.encoding]::Unicode.GetBytes($pt));$enc")
     for line in tqdm(etext.splitlines(), desc="Loading ", ncols=100, unit='Line(s)', bar_format='{l_bar}{bar} | {n_fmt}/{total_fmt} {unit}', colour='BLUE'):
-        raw = subprocess.run(["powershell.exe", line], capture_output=True)
-        eoutcome = raw.stdout.decode("utf-8")
+        pseraw = subprocess.run(["powershell.exe", line],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        eoutcome = pseraw.stdout.decode("utf-8")
         data = subprocess.run(
             ["powershell.exe", "-encoded", eoutcome], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         pseoutput = data.stdout.decode("utf-8")[6:]
