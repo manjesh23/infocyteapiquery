@@ -19,6 +19,19 @@ This is API Query Function
 
 
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
+    '''
+        -- cname --> Cloud Instance Name <cname.infocyte.com> ('cname' is without .infocyte.com)
+        -- apikey --> APIKEY or the API Token
+        -- apiquery --> API GET Method
+
+        ** Set above args as pre-defined variables (Can be used multiple times) or call them on the fly (Single use).
+
+    icdata = ic.query(cname, apikey, apiquery)
+
+    variable 'icdata' --> PandasDataframe. Can now be used with all options available from pandas. Refer README and Wiki for more details. https://pandas.pydata.org/docs/
+
+    Note: 'query' function loops until it reaches the last page on API explorer. Larger the data, more time it takes. However each loop will pull 1K entries (rows) and progress details are displayed while quering the data.
+    '''
     tqdm.pandas()
     global icpd, icd
     icd = requests.get("https://"+cname+".infocyte.com/api/" +
@@ -56,8 +69,9 @@ def query(cname="cname", apikey="apikey", apiquery="apiquery"):
                     icdata = json.loads(loopic.text)
                     icdb = pd.DataFrame(icdata)
                     icpd = icpd.append(icdb, ignore_index=True)
-    #mask = icpd.astype(str).apply(lambda x: x.str.match(r'(\d{2,4}-\d{2}-\d{2,4})+').all())
-    #icpd.loc[:, mask] = icpd.loc[:, mask].apply(pd.to_datetime)
+    # mask = icpd.astype(str).apply(lambda x: x.str.match(r'(\d{2,4}-\d{2}-\d{2,4})+').all())
+    # icpd.loc[:, mask] = icpd.loc[:, mask].apply(pd.to_datetime)
+    '''Above 2 lines are to convert pandas date and time column to datetime format of Python. Intentionally skipping the above line as this creating issues while exporting date into excel and db files.'''
     return icpd
 
 
@@ -67,6 +81,19 @@ This is PowerShell Function
 
 
 def ps(cname="cname", apikey="apikey", pscmd="pscmd"):
+    '''
+        -- cname --> Cloud Instance Name < cname.infocyte.com > ('cname' is without .infocyte.com)
+        -- apikey --> APIKEY or the API Token
+        -- pscmd --> PowerShell Script Commands
+
+        ** Set above args as pre-defined variables(Can be used multiple times) or call them on the fly(Single use).
+
+    psdata = ic.ps(cname, apikey, pscmd)
+
+    variable 'psdata' --> Python string object. Can now be used with all options available from python string. Refer README and Wiki for more details.
+
+    Note: 'ps' function get the subprocess stdout to Python string object. To get the JSON or Table format, use the PowerSHELL built-in 'ConvertTo' method. https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/
+    '''
     global psout, psraw, psoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
@@ -85,6 +112,21 @@ This is PowerShell base64-Encoded Funcation
 
 
 def pse(cname="cname", apikey="apikey", psecmd="psecmd"):
+    '''
+        -- cname --> Cloud Instance Name < cname.infocyte.com > ('cname' is without .infocyte.com)
+        -- apikey --> APIKEY or the API Token
+        -- psecmd --> PowerShell Script Commands Support Pipe and Complex filters
+
+        ** Set above args as pre-defined variables(Can be used multiple times) or call them on the fly(Single use).
+
+    psedata = ic.pse(cname, apikey, psecmd)
+
+    variable 'psedata' --> Python string object. Can now be used with all options available from python string. Refer README and Wiki for more details.
+
+    Note:
+    'pse' function uses base64 encoded type of PowerShell commands.
+    'pse' function get the subprocess stdout to Python string object. To get the JSON or Table format, use the PowerSHELL built-in 'ConvertTo' method. https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/
+    '''
     global pseout, pseraw, pseoutput
     key = "Set-ICToken -Instance " + cname + " -Token " + \
         apikey + ";Set-ICBox -Global -Last 90;"
