@@ -23,4 +23,4 @@ def test_ps():
     apikey = os.getenv("apikey")
     ic.ps(cname, apikey, pscmd)
     #assert re.search('exe|dll', ic.psout)
-    assert bool(ic.psoutput) == True
+    assert bool(ic.psoutput) == False
