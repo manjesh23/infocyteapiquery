@@ -7,7 +7,7 @@
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/manjesh23/infocyteapiquery/graphs/commit-activity)
 [![Python package pytest](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest.yml/badge.svg)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest.yml)
 [![Python package pytest on Windows](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest_win.yml/badge.svg)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/pytest_win.yml)
-
+[![CodeQL](https://github.com/manjesh23/infocyteapiquery/actions/workflows/codeql-analysis.yml/badge.svg?branch=main&event=status)](https://github.com/manjesh23/infocyteapiquery/actions/workflows/codeql-analysis.yml)
 
 
 
