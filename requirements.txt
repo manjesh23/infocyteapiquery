@@ -8,5 +8,5 @@ tqdm
 paginateit
 requests
 
-pytest
+pytest==6.2.4
 pytest-runner
