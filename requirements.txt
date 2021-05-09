@@ -1,6 +1,6 @@
 pip
 wheel
-Sphinx
+Sphinx==4.0.0
 twine
 
 pandas
