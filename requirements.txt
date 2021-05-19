@@ -9,4 +9,4 @@ paginateit
 requests
 
 pytest
-pytest-runner
+pytest-runner==5.3.1
