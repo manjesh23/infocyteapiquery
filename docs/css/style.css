@@ -63,3 +63,77 @@ textarea {
     width: 60%;
     height: 150px;
 }
+
+
+/* Rule builder template */
+
+.three-col {
+    overflow: hidden;
+    /* Makes this div contain its floats */
+}
+
+.three-col .col1,
+.three-col .col2,
+.three-col .col3 {
+    width: 33%;
+}
+
+.three-col .col1 {
+    float: left;
+}
+
+.three-col .col2 {
+    float: left;
+}
+
+.three-col .col3 {
+    float: right;
+}
+
+.three-col label {
+    display: block;
+}
+
+.textbox {
+    resize: both;
+    width: 95%;
+    height: 150px;
+}
+
+#build {
+    resize: both;
+    width: 100%;
+    height: 150px;
+    padding: 10px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    font-family: monospace;
+}
+
+.keyword {
+    color: orange;
+}
+
+.booland {
+    color: green;
+}
+
+#ev-button {
+    padding: 10px;
+    color: white;
+    background-color: #009578;
+    border: 1px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#ev-button:hover {
+    background-color: #00b28f;
+}
+
+#ev-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+}

@@ -12,7 +12,18 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <script type='text/javascript' src='./js/script.js'></script>
+    <script type='text/javascript' src='./js/script10.js'></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#button').click(function() {
+                if (!$('#iframe').length) {
+                    $('#iframeHolder').html('<iframe id="iframe" src="regexmap.html" width="100%" height="500"></iframe>');
+                }
+            });
+        });
+    </script>
     <title>
         Infocyteapiquery
     </title>
@@ -40,10 +51,11 @@
     <span id='ct' class="text-primary position-absolute top-10 end-0"></span>
     <div class="tab">
         <button class="tablinks" onclick="opentab(event, 'home')">Home</button>
-        <button class="tablinks" onclick="opentab(event, 'yaml')">YAML Rules Tester</button>
+        <button class="tablinks" onclick="opentab(event, 'yaml')">Rules Tester</button>
+        <button class="tablinks" onclick="opentab(event, 'yamlb')">Rule Builder</button>
+        <button class="tablinks" onclick="opentab(event, 'logz')">Logalizer</button>
 
     </div>
-    <h1>This part of the page is still under construction and none of the tabs are working yet</h1>
     <div id="home" class="tabcontent">
         <h3>Home</h3>
         <p>This is our homepage.</p>
@@ -55,12 +67,64 @@
         <br>
         <p class="fs-4 text-primary">Offline Scan Data: </p><textarea id="dataInput" placeholder="Infocyte Offline Scan Data goes here..."></textarea>
         <br>
-        <button type="submit" class="btn btn-secondary" onclick="regexmatch();">Test RegEx</button>
+        <button type="submit" class="btn btn-secondary" onClick="regexmatch();">Test Rule</button>
         <br>
         <p id="demo"></p>
+
     </div>
 
-
+    </div>
+    <div id="yamlb" class="tabcontent three-col">
+        <h3>YAML Rule Builder</h3>
+        <p>YAML Rules for Humans.</p>
+        <div class="col1 fs-4 text-primary">
+            <label for="mandate">Mandate:</label>
+            <textarea class="textbox" id="mandate" name="mandate" type="text" onkeyup="trimMe(this)"></textarea>
+        </div>
+        <div class="col2 fs-4 text-primary">
+            <label for="logicand">AND:</label>
+            <textarea class="textbox" id="logicand" name="logicand" type="text" onkeyup="trimMe(this)"></textarea>
+        </div>
+        <div class="col3 fs-4 text-primary">
+            <label for="logicor">OR:</label>
+            <textarea class="textbox" id="logicor" name="logicor" type="text" onkeyup="trimMe(this)"></textarea>
+        </div>
+        <hr>
+        <button type="submit" class="btn btn-secondary" onClick="buildrule();">Build Rule</button>
+        <button type="submit" class="btn btn-secondary" id="button" onClick="flowdiag();">Flow Diagram</button>
+        <hr>
+        <p class="fs-4 text-secondary">YAML Rule Body</p>
+        <div id="build" contenteditable="true"></div>
+        <iframe height=500 width="100%" frameborder=0 name="railroad"></iframe>
+    </div>
+    <div id="logz" class="tabcontent">
+        <h3>Logalizer</h3>
+        <p>Analyze logs Eazy</p>
+        <div>
+            <input type="file" id="ev-file" hidden="hidden" />
+            <button type="button" id="ev-button" onClick="evlogs();">Event Viewer Logs</button>
+            <span id="ev-text">No file here...</span>
+            <p class="fs-6 text-secondary">Get-EventLog -LogName System -Message *infocyte* | Format-Table -AutoSize | Out-File 'C:\.....\Desktop\ic.txt'</p>
+        </div>
+    </div>
+    </div>
 </body>
+<script>
+    // Infocyte keywords
+    var keywords = ["hostOs", "type", "raw", "processName", "commandLine", "path", "parentProcessName", "grandParentProcessName", "decodedPayload", "state", "name", "remote_addr", "destination_ip", "remote_port", "params"];
+    // Output shows the effect
+    document.querySelector('#build').addEventListener('mouseover', function(event) {
+        var newHTML = "";
+        // Loop through words
+        str = event.target.innerText;
+        chunks = str.split(new RegExp(keywords.map(w => `(${w})`).join('|'), 'i')).filter(Boolean), markup = chunks.reduce((acc, chunk) => {
+            acc += keywords.includes(chunk) ?
+                `<span class="keyword">${chunk}</span>` :
+                `<span class='other'>${chunk}</span>`
+            return acc
+        }, '')
+        event.target.innerHTML = markup;
+    });
+</script>
 
 </html>
