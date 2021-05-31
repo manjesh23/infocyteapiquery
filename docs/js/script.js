@@ -23,81 +23,204 @@ function opentab(evt, tabName) {
     evt.currentTarget.className += " active";
 }
 
-function getInputValue() {
-    var yamlInput = document.getElementById("yamlInput").value;
-    var dataInput = document.getElementById("dataInput").value;
-    var result = yamlInput.match(dataInput);
-    document.getElementById("demo").innerHTML = result;
-
-}
-
-function regexmatch() {
-    var yamltextArea = document.getElementById('yamlInput');
-    var dataInput = document.getElementById("dataInput").value;
-    // lines is an array of YAML data
-    var yamllines = yamltextArea.value.split(/&&|\|\|/);
-    console.log(yamllines)
-        //var yamlclean = yamltextArea.value.replace(/\b(\\)\b/gm, "\\\\");
-        //console.log(yamltextArea.value)
-    var tdatalines = dataInput.replaceAll("\"", " ");
-    var datal = tdatalines.split(",");
-    var datalines = datal.slice(1, -1);
-    // Loop through all lines in YAML data
-    var yamldata = {};
-    var nyamldata = {};
-    for (var j = 0; j < yamllines.length; j++) {
-        if (yamllines[j].indexOf("==") !== -1) {
-            var cyamlmatches = yamllines[j].match(/(\"(.*?)\"|'(.*?)')/);
-            if (cyamlmatches) {
-                var csubmatch = cyamlmatches[1];
-                var cbeforeyaml = yamllines[j].split("==").shift();
-                yamldata[cbeforeyaml.replaceAll(/\r?\n|\r|\s/g, "")] = csubmatch.replaceAll(/\"/g, "");
-                console.log(yamldata)
-                    //console.log('= ' + cbeforeyaml + ' = ' + csubmatch)
-            }
-        } else {
-            var nyamlmatches = yamllines[j].match(/(\"(.*?)\"|'(.*?)')/);
-            if (nyamlmatches) {
-                var nsubmatch = nyamlmatches[1];
-                var nbeforeyaml = yamllines[j].split("!=").shift();
-                nyamldata[nbeforeyaml] = nsubmatch;
-                //console.log('! ' + nbeforeyaml + ' = ' + nsubmatch)
-            }
-        }
-    }
-    var ndjson = {};
-    for (var i = 0; i < datalines.length; i++) {
-        var cdatamatches = datalines[i].split("\s:\s");
-        if (cdatamatches) {
-            var datasubmatch = cdatamatches[0];
-            var beforedata = datasubmatch.split(/\s:/g)[0]
-            var actualdata = datasubmatch.split(/\s:/g)[1]
-            var newactualdata = JSON.stringify(actualdata, function(key, value) { return (value === undefined) ? "" : value });
-            ndjson[beforedata] = newactualdata.replaceAll(/\s/g, "");
-            //console.log(beforedata + ' = ' + actualdata)
-        }
-    }
-
-    function compare(Obj1, Obj2) {
-        var equivalent = [];
-        var keys = Object.keys(Obj1);
-        keys.forEach(k => {
-            if (Obj1.hasOwnProperty(k) && Obj2.hasOwnProperty(k)) {
-                if (Obj1[k] === Obj2[k]) {
-                    equivalent.push(Obj1[k]);
-                }
-            }
-        });
-
-        console.log(equivalent);
-    }
-
-    compare(yamldata, ndjson);
-}
-
-//console.log(yamlkey, yamldata[yamlkey])
-
-
 function flowdiag() {
     document.getElementsByName('railroad')[0].src = "regexmap.html";
+    window.scrollBy(0, document.body.scrollHeight || document.documentElement.scrollHeight);
+}
+
+/* function regexmatch() {
+    var yamltextArea = document.getElementById('yamlInput').value;
+    var dataInput = document.getElementById("dataInput").value;
+    var trimyaml = yamltextArea.slice(yamltextArea.indexOf("&&") + 3);
+    console.log(trimyaml)
+}
+ */
+
+
+
+
+
+
+// Still building | Another varient
+function regexmatch() {
+    var yamltextArea = document.getElementById('yamlInput').value;
+    var miniyaml = yamltextArea.replaceAll(/\n|\s/g, "");
+    if (miniyaml.includes("hostOs")) {
+        var trimyaml = yamltextArea.slice(yamltextArea.indexOf("&&") + 3).replaceAll(/\n|\s/g, "");
+    }
+    var yamlpipe = trimyaml.split(/\|\|/);
+    console.log(yamlpipe)
+    var oryaml = "";
+    var andyaml = yamlpipe[0].split(/&&/);
+    if (yamlpipe.length > 1) {
+        for (var i = 1; i < yamlpipe.length; i++) {
+            if (yamlpipe[i].includes("\(\(")) {
+                console.log("------> 1st if")
+                var rnoryaml = yamlpipe[0].split(/&&/);
+                var oryaml = rnoryaml.shift().concat(yamlpipe[1]);
+            }
+            if (yamlpipe[1].includes("\)\)")) {
+                console.log("------> 2nd if")
+                var rp1oryaml = yamlpipe[0];
+                var oryaml = rp1oryaml.split("&&").slice(0, -1).concat(yamlpipe[1]);
+            } else {
+                console.log("------> 3rd if")
+                var rporyaml = yamlpipe[0];
+                var oryaml = rporyaml.split(/\(\(/).slice(0, -1).concat(yamlpipe[1]);
+            }
+        }
+    } else {
+        console.log("------> not if")
+        var oryaml = "";
+        //var rnoryaml = yamlpipe[0].split(/&&/);
+        //var oryaml = rnoryaml.shift().concat("," + yamlpipe[1]);
+    }
+
+    console.log("And: " + andyaml)
+    console.log("Or: " + oryaml)
+}
+
+/* 
+function regexmatch() {
+    var yamltextArea = document.getElementById('yamlInput');
+    var trimyaml = yamltextArea.value.slice(yamltextArea.value.indexOf("&&") + 3);
+    var iregex = /iregex|\(|\)/g;
+    var regex = /&&|\|\|/g;
+    var signature = (trimyaml.match(regex).reverse());
+    var yaml = (trimyaml.replaceAll(iregex, ""));
+    var yamldata = {};
+    for (var i = signature.length - 1; i >= 0; i--) {
+        var dsignature = signature.splice(i, 1);
+        if (dsignature == "&&") {
+            var yamldata = yaml;
+            console.log(yamldata)
+        }
+    }
+} */
+
+function trimMe(textboxdata) {
+    textboxdata.value = textboxdata.value.replace(/\s\s|iregex\(\"|\"\)|iregex\(\'|\'\)/gi, " ").replace(/\s==\s|\":\"|\":\s\"/g, " = ").replace(/\"|,$/g, "").replace(/\(\n/g, "(").replace(/\n\)/g, ")");
+    //textboxdata.style.color = "red";
+}
+
+function buildrule() {
+    var mandate = document.getElementById('mandate').value.replaceAll(/\n|,/g, " && ").replace(/=/g, " == iregex(\"");
+    var logicand = document.getElementById('logicand').value.replaceAll(/\n|,/g, " && ").replace(/=/g, " == iregex(\"");
+    var logicor = document.getElementById('logicor').value.replaceAll(/\n|,/g, " && ").replace(/=/g, " == iregex(\"");
+    var fmandate = mandate.replaceAll(/\s&&\s/g, "\") && ").replaceAll(/\s\|\|\s/g, "\") || ");
+    var flogicand = logicand.replaceAll(/\s&&\s/g, "\") && ").replaceAll(/\s\|\|\s/g, "\") || ");
+    var flogicor = logicor.replaceAll(/\s&&\s/g, "\") && ").replaceAll(/\s\|\|\s/g, "\") || ");
+    if (mandate == "") {
+        var result = "Mandate field is Must"
+    } else if (logicand == "" && logicor == "") {
+        var result = (fmandate + "\")");
+    } else if (logicor == "") {
+        var result = (fmandate + "\") && " + flogicand + "\")");
+    } else if (logicand == "") {
+        var result = (fmandate + "\") || " + flogicor + "\")");
+    } else {
+        var result = (fmandate + "\") && " + flogicand + "\") || " + flogicor + "\")");
+    }
+    var fresult = result.replaceAll(/\)\"\)/g, "\"))").replaceAll(/\)\"\)\)/g, "\")))").replaceAll(/\)\"\)\)\)/g, "\"))))").replaceAll(/\b\s+\"|\"\s\b/g, "\"").replaceAll(/!\s==/g, " != ").replaceAll(/\"\s|\s\"/g, "\"").replaceAll(/\./g, "\\.").replaceAll(/\s&&\"\)/g, "").replaceAll(/iregex\(\"null\"\)/g, "null");
+    document.getElementById("build").innerHTML = fresult;
+}
+
+function evlogs() {
+    let input = document.querySelector('#evlogs');
+    input.addEventListener('change', () => {
+        let files = input.files;
+        if (files.length == 0) return;
+        const file = files[0];
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = (e) => {
+            const file = e.target.result;
+            var evlogs = file;
+            if (evlogs.includes("InstanceID")) {
+                var mapObj = {
+                    "A service was installed in the system": "<span class=\"logsuccess\">A service was installed in the system</span>",
+                    "The Infocyte HUNT Agent service is marked as an interactive service.": "<span class=\"logwarning\">The Infocyte HUNT Agent service is marked as an interactive service</span>",
+                    "The Infocyte HUNT Agent service terminated unexpectedly.": "<span class=\"logdanger\">The Infocyte HUNT Agent service terminated unexpectedly.</span>",
+
+                };
+                let keys = Object.keys(mapObj);
+                var regexkeys = JSON.stringify(keys).replace(/,/g, "|").replace(/\[|\]|\"/g, "");
+                var keysmatch = new RegExp(regexkeys, "gi");
+                finalevlogs = evlogs.replace(keysmatch, matched => mapObj[matched]);
+                document.getElementById("results").innerHTML = finalevlogs;
+            } else {
+                alert("Please upload Event Viewer logs")
+                window.location.reload();
+            }
+
+        };
+        reader.onerror = (e) => alert(e.target.error.name);
+    });
+}
+
+function alogs() {
+    let input = document.querySelector('#alogs');
+    input.addEventListener('change', () => {
+        let files = input.files;
+        if (files.length == 0) return;
+        const file = files[0];
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = (e) => {
+            var file = e.target.result.replace(/,/g, "");
+            var lines = file.split(/\r\n|\n/);
+            var alogs = lines.join(',').replace(/,/g, "<br>");
+            if (alogs.includes("[agent::")) {
+                var mapObj = {
+                    "Results sent scan is complete": "<span class=\"logsuccess\">Results sent scan is complete</span>",
+                    "Cannot execute jobs: Unable to post data: error sending request for url": "<span class=\"logdanger\">Cannot execute jobs: Unable to post data: error sending request for url</span>",
+                    "Service stop signal received.": "<span class=\"logdanger\">Service stop signal received.</span>",
+                    "Received stop signal from service controller": "<span class=\"logdanger\">Received stop signal from service controller</span>",
+                    "error notifying wait possible future leak": "<span class=\"logdanger\">error notifying wait possible future leak</span>",
+                    "Unable to put data: error sending request for url": "<span class=\"logdanger\">Unable to put data: error sending request for url</span>",
+                    "Error communicating with API: Unable to post data: error sending request for url": "<span class=\"logdanger\">Error communicating with API: Unable to post data: error sending request for url</span>",
+                    "Agent has started": "<span class=\"logsuccess\">Agent has started</span>",
+                    "os error 10051": "<span class=\"oserror10051\">os error 10051</span>",
+                    "os error 10060": "<span class=\"oserror10060\">os error 10060</span>",
+                    "os error 10054": "<span class=\"oserror10054\">os error 10054</span>",
+                    "Enabling RTS": "<span class=\"logwarning\">Enabling RTS</span>",
+                    "RTS Enabled": "<span class=\"logwarning\">RTS Enabled</span>",
+                    "Notifying service controller that HUNT Agent is shutting down": "<span class=\"logwarning\">Notifying service controller that HUNT Agent is shutting down</span>",
+                    "Enumerating running processes": "<span class=\"logprimary\">Enumerating running processes</span>",
+                    "Enumerating drivers": "<span class=\"logprimary\">Enumerating drivers</span>",
+                    "Enumerating autostart locations": "<span class=\"logprimary\">Enumerating autostart locations</span>",
+                    "Enumerating users": "<span class=\"logprimary\">Enumerating users</span>",
+                    "Collecting important events": "<span class=\"logprimary\">Collecting important events</span>",
+
+                };
+                let keys = Object.keys(mapObj);
+                var regexkeys = JSON.stringify(keys).replace(/,/g, "|").replace(/\[|\]|\"/g, "");
+                var keysmatch = new RegExp(regexkeys, "gi");
+                str = alogs.replace(keysmatch, matched => mapObj[matched]);
+                document.getElementById("results").innerHTML = str;
+            } else {
+                alert("Please upload Agent logs")
+                window.location.reload();
+            }
+        };
+        reader.onerror = (e) => alert(e.target.error.name);
+    });
+}
+
+function clogs() {
+    let input = document.querySelector('#clogs');
+    input.addEventListener('change', () => {
+        let files = input.files;
+        if (files.length == 0) return;
+        const file = files[0];
+        let reader = new FileReader();
+        reader.readAsText(file);
+        reader.onload = (e) => {
+            const file = e.target.result;
+            const lines = file.split(/\r\n|\n/);
+            var evlogs = lines.join('\n');
+            console.log(evlogs)
+        };
+        reader.onerror = (e) => alert(e.target.error.name);
+    });
 }

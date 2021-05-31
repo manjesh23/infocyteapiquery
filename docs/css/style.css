@@ -115,25 +115,61 @@ textarea {
     color: orange;
 }
 
-.booland {
-    color: green;
+.formated {
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 14px;
+    margin-top: 20px;
+    padding: auto;
+    margin-bottom: 40px;
+    color: rgb(139, 139, 139);
+    background-color: rgba(3, 2, 2, 0.856);
 }
 
-#ev-button {
-    padding: 10px;
-    color: white;
-    background-color: #009578;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
+.logsuccess {
+    color: rgb(64, 204, 64);
 }
 
-#ev-button:hover {
-    background-color: #00b28f;
+.logwarning {
+    color: rgb(212, 212, 80);
 }
 
-#ev-text {
-    margin-left: 10px;
-    font-family: sans-serif;
-    color: #aaa;
+.logprimary {
+    color: rgb(109, 109, 236);
+}
+
+.logdanger,
+.oserror10051,
+.oserror10060,
+.oserror10054 {
+    color: rgb(233, 72, 72);
+}
+
+.logsuccess:hover,
+.logdanger:hover,
+.logwarning:hover,
+.logprimary:hover {
+    font-size: 20px;
+}
+
+.oserror10051:hover:after {
+    background-color: rgb(209, 204, 204);
+    border: 2px;
+    font-size: 20px;
+    content: " happens because the other network is unreachable, usually because there is a problem with the router or modem on the computer attempting the connection. This can be as harmless as the router being shut off or a firewall getting in the way";
+}
+
+.oserror10060:hover:after {
+    background-color: rgb(209, 204, 204);
+    border: 2px;
+    font-size: 20px;
+    content: "  is a connection-timeout error that usually appears when the client does not receive a response from the server for a specific command. This error often occurs when you try to connect in PASV mode to a server that prefers PORT for data connections";
+}
+
+.oserror10054:hover:after {
+    background-color: rgb(209, 204, 204);
+    border: 2px;
+    font-size: 20px;
+    content: "  Connection reset by peer. An existing connection was forcibly closed by the remote host. ... This Windows error 10054 occurs when the connection is reset by the peer application. It happens usually due to an incorrect firewall configuration";
 }
