@@ -187,5 +187,21 @@
         }
     });
 </script>
+<script>
+    $(document.querySelector('#results')).on('mouseenter', 'spana', function(e) {
+        var time = $(e.target).context.innerText;
+        e.target.innerHTML = new Date(time).toString().replace(/ *\([^)]*\) */g, "");
+    });
+    $(document.querySelector('#results')).on('mouseenter', 'spanb', function(e) {
+        let tzone = document.getElementById('results', 'spanb#tzonehere').innerText.match(new RegExp(/tzone:[a-zA-Z/_]{0,50}/, "gi"));
+        let tzonehere = tzone[0].substring(tzone[0].indexOf(":") + 1);
+        var time = $(e.target).context.innerText;
+        e.target.innerHTML = new Date(time).toLocaleString("en-US", {
+            dateStyle: 'medium',
+            timeStyle: 'long',
+            timeZone: `${tzonehere}`
+        });
+    });
+</script>
 
 </html>
