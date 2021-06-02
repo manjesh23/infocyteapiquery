@@ -1,12 +1,12 @@
-pip
+pip==21.1.2
 wheel
 Sphinx
 twine
 
 pandas
-tqdm
+tqdm==4.61.0
 paginateit
 requests
 
-pytest
+pytest==6.2.4
 pytest-runner
