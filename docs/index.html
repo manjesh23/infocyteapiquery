@@ -124,82 +124,76 @@
     </div>
 </body>
 <script>
-    // Infocyte keywords
-    var keywords = ["hostOs", "type", "raw", "processName", "commandLine", "path", "parentProcessName", "grandParentProcessName", "decodedPayload", "state", "name", "remote_addr", "destination_ip", "remote_port", "params"];
-    // Output shows the effect
-    document.querySelector('#build').addEventListener('mouseover', function(event) {
-        var newHTML = "";
-        // Loop through words
-        str = event.target.innerText;
-        chunks = str.split(new RegExp(keywords.map(w => `(${w})`).join('|'), 'i')).filter(Boolean), markup = chunks.reduce((acc, chunk) => {
-            acc += keywords.includes(chunk) ?
-                `<span class="keyword">${chunk}</span>` :
-                `<span class='other'>${chunk}</span>`
-            return acc
-        }, '')
-        event.target.innerHTML = markup;
-    });
-</script>
-<script>
-    const evrealFileBtn = document.getElementById("evlogs");
-    const evcustomBtn = document.getElementById("evcustom-button");
-    const evcustomTxt = document.getElementById("evcustom-text");
-    evcustomBtn.addEventListener("click", function() {
-        evrealFileBtn.click();
-    });
-    evrealFileBtn.addEventListener("change", function() {
-        if (evrealFileBtn.value) {
-            evcustomTxt.innerHTML = evrealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            evcustomTxt.innerHTML = "No file chosen, yet.";
+    const _0x3cb8 = ['addEventListener', 'toString', '319065VzyNVc', 'target', 'commandLine', 'long', '1046gJdBeq', 'value', 'click', 'ccustom-button', '<span\x20class=\x27other\x27>', 'replace', 'includes', 'match', 'No\x20file\x20chosen,\x20yet.', 'substring', 'params', 'en-US', '1301wvByhb', 'alogs', 'map', 'path', 'decodedPayload', 'clogs', 'spana', 'getElementById', 'remote_addr', 'name', '41aZAZaG', 'grandParentProcessName', 'change', 'evcustom-text', 'reduce', '6GdUnjv', 'hostOs', 'indexOf', 'filter', '82RfCOxk', 'raw', 'state', 'querySelector', 'results', '19NmOZpn', 'split', 'innerText', 'remote_port', '6397JasVgv', '</span>', '31585TLeJcC', 'spanb#tzonehere', '7405QOiJFf', '#results', 'innerHTML', 'toLocaleString', 'join', 'medium', '351631KaBDXW', 'context', '31PjcOrX', 'parentProcessName', 'destination_ip', 'type'];
+    const _0x33f58d = _0x4cab;
+    (function(_0x173944, _0x14096f) {
+        const _0x38b4a0 = _0x4cab;
+        while (!![]) {
+            try {
+                const _0x211124 = -parseInt(_0x38b4a0(0x1e0)) * -parseInt(_0x38b4a0(0x1c1)) + -parseInt(_0x38b4a0(0x1bd)) * -parseInt(_0x38b4a0(0x1ae)) + parseInt(_0x38b4a0(0x1c6)) * parseInt(_0x38b4a0(0x1ca)) + parseInt(_0x38b4a0(0x1dc)) + parseInt(_0x38b4a0(0x1d4)) + parseInt(_0x38b4a0(0x1b8)) * parseInt(_0x38b4a0(0x1ce)) + parseInt(_0x38b4a0(0x1d6)) * -parseInt(_0x38b4a0(0x1cc));
+                if (_0x211124 === _0x14096f) break;
+                else _0x173944['push'](_0x173944['shift']());
+            } catch (_0x59d2d8) {
+                _0x173944['push'](_0x173944['shift']());
+            }
         }
+    }(_0x3cb8, 0x3356f));
+    var keywords = [_0x33f58d(0x1be), _0x33f58d(0x1d9), _0x33f58d(0x1c2), 'processName', _0x33f58d(0x1de), _0x33f58d(0x1b1), _0x33f58d(0x1d7), _0x33f58d(0x1b9), _0x33f58d(0x1b2), _0x33f58d(0x1c3), _0x33f58d(0x1b7), _0x33f58d(0x1b6), _0x33f58d(0x1d8), _0x33f58d(0x1c9), _0x33f58d(0x1ac)];
+    document[_0x33f58d(0x1c4)]('#build')[_0x33f58d(0x1da)]('mouseover', function(_0x2b63ef) {
+        const _0x3ceb5b = _0x33f58d;
+        var _0x67d230 = '';
+        str = _0x2b63ef[_0x3ceb5b(0x1dd)][_0x3ceb5b(0x1c8)], (chunks = str[_0x3ceb5b(0x1c7)](new RegExp(keywords[_0x3ceb5b(0x1b0)](_0x17cbe5 => '(' + _0x17cbe5 + ')')[_0x3ceb5b(0x1d2)]('|'), 'i'))[_0x3ceb5b(0x1c0)](Boolean), markup = chunks[_0x3ceb5b(0x1bc)]((_0xcaeb7f, _0x2867d3) => {
+            const _0x8daa4c = _0x3ceb5b;
+            return _0xcaeb7f += keywords[_0x8daa4c(0x1a8)](_0x2867d3) ? '<span\x20class=\x22keyword\x22>' + _0x2867d3 + _0x8daa4c(0x1cb) : _0x8daa4c(0x1a6) + _0x2867d3 + '</span>', _0xcaeb7f;
+        }, '')), _0x2b63ef[_0x3ceb5b(0x1dd)][_0x3ceb5b(0x1d0)] = markup;
     });
-    const arealFileBtn = document.getElementById("alogs");
-    const acustomBtn = document.getElementById("acustom-button");
-    const acustomTxt = document.getElementById("acustom-text");
-    acustomBtn.addEventListener("click", function() {
-        arealFileBtn.click();
+    const evrealFileBtn = document[_0x33f58d(0x1b5)]('evlogs'),
+        evcustomBtn = document['getElementById']('evcustom-button'),
+        evcustomTxt = document['getElementById'](_0x33f58d(0x1bb));
+
+    function _0x4cab(_0xe22324, _0x192651) {
+        _0xe22324 = _0xe22324 - 0x1a5;
+        let _0x3cb884 = _0x3cb8[_0xe22324];
+        return _0x3cb884;
+    }
+    evcustomBtn[_0x33f58d(0x1da)](_0x33f58d(0x1e2), function() {
+        evrealFileBtn['click']();
+    }), evrealFileBtn['addEventListener'](_0x33f58d(0x1ba), function() {
+        const _0x484fbd = _0x33f58d;
+        evrealFileBtn[_0x484fbd(0x1e1)] ? evcustomTxt[_0x484fbd(0x1d0)] = evrealFileBtn['value'][_0x484fbd(0x1a9)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : evcustomTxt['innerHTML'] = _0x484fbd(0x1aa);
     });
-    arealFileBtn.addEventListener("change", function() {
-        if (arealFileBtn.value) {
-            acustomTxt.innerHTML = arealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            acustomTxt.innerHTML = "No file chosen, yet.";
-        }
+    const arealFileBtn = document[_0x33f58d(0x1b5)](_0x33f58d(0x1af)),
+        acustomBtn = document[_0x33f58d(0x1b5)]('acustom-button'),
+        acustomTxt = document['getElementById']('acustom-text');
+    acustomBtn[_0x33f58d(0x1da)](_0x33f58d(0x1e2), function() {
+        const _0x49ec79 = _0x33f58d;
+        arealFileBtn[_0x49ec79(0x1e2)]();
+    }), arealFileBtn[_0x33f58d(0x1da)]('change', function() {
+        const _0x3c2fb4 = _0x33f58d;
+        arealFileBtn[_0x3c2fb4(0x1e1)] ? acustomTxt[_0x3c2fb4(0x1d0)] = arealFileBtn[_0x3c2fb4(0x1e1)]['match'](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : acustomTxt['innerHTML'] = _0x3c2fb4(0x1aa);
     });
-    const crealFileBtn = document.getElementById("clogs");
-    const ccustomBtn = document.getElementById("ccustom-button");
-    const ccustomTxt = document.getElementById("ccustom-text");
-    ccustomBtn.addEventListener("click", function() {
-        crealFileBtn.click();
-    });
-    crealFileBtn.addEventListener("change", function() {
-        if (crealFileBtn.value) {
-            ccustomTxt.innerHTML = crealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            ccustomTxt.innerHTML = "No file chosen, yet.";
-        }
-    });
-</script>
-<script>
-    $(document.querySelector('#results')).on('mouseenter', 'spana', function(e) {
-        var time = $(e.target).context.innerText;
-        e.target.innerHTML = new Date(time).toString().replace(/ *\([^)]*\) */g, "");
-    });
-    $(document.querySelector('#results')).on('mouseenter', 'spanb', function(e) {
-        let tzone = document.getElementById('results', 'spanb#tzonehere').innerText.match(new RegExp(/tzone:[a-zA-Z/_]{0,50}/, "gi"));
-        let tzonehere = tzone[0].substring(tzone[0].indexOf(":") + 1);
-        var time = $(e.target).context.innerText;
-        e.target.innerHTML = new Date(time).toLocaleString("en-US", {
-            dateStyle: 'medium',
-            timeStyle: 'long',
-            timeZone: `${tzonehere}`
+    const crealFileBtn = document[_0x33f58d(0x1b5)](_0x33f58d(0x1b3)),
+        ccustomBtn = document[_0x33f58d(0x1b5)](_0x33f58d(0x1a5)),
+        ccustomTxt = document[_0x33f58d(0x1b5)]('ccustom-text');
+    ccustomBtn['addEventListener'](_0x33f58d(0x1e2), function() {
+        const _0x2315a3 = _0x33f58d;
+        crealFileBtn[_0x2315a3(0x1e2)]();
+    }), crealFileBtn[_0x33f58d(0x1da)](_0x33f58d(0x1ba), function() {
+        const _0x8962db = _0x33f58d;
+        crealFileBtn[_0x8962db(0x1e1)] ? ccustomTxt[_0x8962db(0x1d0)] = crealFileBtn[_0x8962db(0x1e1)][_0x8962db(0x1a9)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : ccustomTxt[_0x8962db(0x1d0)] = _0x8962db(0x1aa);
+    }), $(document[_0x33f58d(0x1c4)](_0x33f58d(0x1cf)))['on']('mouseenter', _0x33f58d(0x1b4), function(_0x4640b5) {
+        const _0x5f1168 = _0x33f58d;
+        var _0x17de97 = $(_0x4640b5[_0x5f1168(0x1dd)])[_0x5f1168(0x1d5)][_0x5f1168(0x1c8)];
+        _0x4640b5[_0x5f1168(0x1dd)][_0x5f1168(0x1d0)] = new Date(_0x17de97)[_0x5f1168(0x1db)]()[_0x5f1168(0x1a7)](/ *\([^)]*\) */g, '');
+    }), $(document[_0x33f58d(0x1c4)]('#results'))['on']('mouseenter', 'spanb', function(_0x4a5c9f) {
+        const _0xf32989 = _0x33f58d;
+        let _0x2189f0 = document[_0xf32989(0x1b5)](_0xf32989(0x1c5), _0xf32989(0x1cd))[_0xf32989(0x1c8)]['match'](new RegExp(/tzone:[a-zA-Z/_]{0,50}/, 'gi')),
+            _0x250abf = _0x2189f0[0x0][_0xf32989(0x1ab)](_0x2189f0[0x0][_0xf32989(0x1bf)](':') + 0x1);
+        var _0xf39b23 = $(_0x4a5c9f[_0xf32989(0x1dd)])[_0xf32989(0x1d5)]['innerText'];
+        _0x4a5c9f[_0xf32989(0x1dd)][_0xf32989(0x1d0)] = new Date(_0xf39b23)[_0xf32989(0x1d1)](_0xf32989(0x1ad), {
+            'dateStyle': _0xf32989(0x1d3),
+            'timeStyle': _0xf32989(0x1df),
+            'timeZone': '' + _0x250abf
         });
     });
 </script>
