@@ -142,34 +142,43 @@ textarea {
 .logdanger,
 .oserror10051,
 .oserror10060,
-.oserror10054 {
+.oserror10054,
+.oserror10061,
+.oserror1450 {
     color: rgb(233, 72, 72);
 }
 
-.logsuccess:hover,
+
+/* .logsuccess:hover,
 .logdanger:hover,
 .logwarning:hover,
 .logprimary:hover {
     font-size: 20px;
+} */
+
+.loginfoh:hover::after {
+    background-color: rgb(209, 204, 204);
+    border: 2px;
+    border-radius: 10px;
+    font-size: 20px;
 }
 
 .oserror10051:hover:after {
-    background-color: rgb(209, 204, 204);
-    border: 2px;
-    font-size: 20px;
     content: " happens because the other network is unreachable, usually because there is a problem with the router or modem on the computer attempting the connection. This can be as harmless as the router being shut off or a firewall getting in the way";
 }
 
 .oserror10060:hover:after {
-    background-color: rgb(209, 204, 204);
-    border: 2px;
-    font-size: 20px;
     content: "  is a connection-timeout error that usually appears when the client does not receive a response from the server for a specific command. This error often occurs when you try to connect in PASV mode to a server that prefers PORT for data connections";
 }
 
 .oserror10054:hover:after {
-    background-color: rgb(209, 204, 204);
-    border: 2px;
-    font-size: 20px;
     content: "  Connection reset by peer. An existing connection was forcibly closed by the remote host. ... This Windows error 10054 occurs when the connection is reset by the peer application. It happens usually due to an incorrect firewall configuration";
+}
+
+.oserror10061:hover:after {
+    content: " Winsock error 10061 means that the server you are attempting to connect to is actively refusing the connection. This usually results from trying to connect to a service that is inactive on the foreign host."
+}
+
+.oserror1450:hover::after {
+    content: " The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.)"
 }
