@@ -124,80 +124,77 @@
     </div>
 </body>
 <script>
-    // Infocyte keywords
-    var keywords = ["hostOs", "type", "raw", "processName", "commandLine", "path", "parentProcessName", "grandParentProcessName", "decodedPayload", "state", "name", "remote_addr", "destination_ip", "remote_port", "params"];
-    // Output shows the effect
-    document.querySelector('#build').addEventListener('mouseover', function(event) {
-        var newHTML = "";
-        // Loop through words
-        str = event.target.innerText;
-        chunks = str.split(new RegExp(keywords.map(w => `(${w})`).join('|'), 'i')).filter(Boolean), markup = chunks.reduce((acc, chunk) => {
-            acc += keywords.includes(chunk) ?
-                `<span class="keyword">${chunk}</span>` :
-                `<span class='other'>${chunk}</span>`
-            return acc
-        }, '')
-        event.target.innerHTML = markup;
-    });
-    // evlogs alogs and clogs button function
-    const evrealFileBtn = document.getElementById("evlogs");
-    const evcustomBtn = document.getElementById("evcustom-button");
-    const evcustomTxt = document.getElementById("evcustom-text");
-    evcustomBtn.addEventListener("click", function() {
-        evrealFileBtn.click();
-    });
-    evrealFileBtn.addEventListener("change", function() {
-        if (evrealFileBtn.value) {
-            evcustomTxt.innerHTML = evrealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            evcustomTxt.innerHTML = "No file chosen, yet.";
+    const _0x3df6 = ['type', 'toLocaleString', 'target', '</span>', 'value', 'long', 'innerText', 'remote_addr', 'mouseover', 'reduce', 'hostOs', 'addEventListener', 'change', 'getElementById', 'acustom-button', 'commandLine', '#results', 'spanb', '124367Depvqx', '199077utJQwK', 'mouseenter', 'indexOf', 'decodedPayload', 'spana', 'spanb#tzonehere', 'ccustom-text', 'evlogs', 'raw', 'context', 'filter', '2AvNaQX', 'toString', 'destination_ip', 'innerHTML', 'medium', '<span\x20class=\x27other\x27>', 'map', '158894QnYdjW', 'querySelector', 'match', '31081AdiDqt', 'en-US', 'click', 'remote_port', '12zaebii', 'processName', 'results', '<span\x20class=\x22keyword\x22>', '373520pPUuvo', '2477fzpXEw', '198CRBjzZ', '#build', 'evcustom-button', 'substring', 'No\x20file\x20chosen,\x20yet.', 'alogs', 'state', 'name', 'clogs', '129583peeLgG'];
+    const _0x123e31 = _0x4b59;
+    (function(_0x22c56c, _0x1c5ca5) {
+        const _0x207866 = _0x4b59;
+        while (!![]) {
+            try {
+                const _0x47c657 = -parseInt(_0x207866(0x126)) * parseInt(_0x207866(0x122)) + parseInt(_0x207866(0x10d)) + parseInt(_0x207866(0xef)) * -parseInt(_0x207866(0xf0)) + parseInt(_0x207866(0xf9)) + parseInt(_0x207866(0x11f)) + parseInt(_0x207866(0x12a)) + -parseInt(_0x207866(0x10c)) * -parseInt(_0x207866(0x118));
+                if (_0x47c657 === _0x1c5ca5) break;
+                else _0x22c56c['push'](_0x22c56c['shift']());
+            } catch (_0x331ec8) {
+                _0x22c56c['push'](_0x22c56c['shift']());
+            }
         }
+    }(_0x3df6, 0x3c276));
+    var keywords = [_0x123e31(0x104), _0x123e31(0xfa), _0x123e31(0x115), _0x123e31(0x127), _0x123e31(0x109), 'path', 'parentProcessName', 'grandParentProcessName', _0x123e31(0x110), _0x123e31(0xf6), _0x123e31(0xf7), _0x123e31(0x101), _0x123e31(0x11a), _0x123e31(0x125), 'params'];
+
+    function _0x4b59(_0x5d6302, _0x251f88) {
+        _0x5d6302 = _0x5d6302 - 0xef;
+        let _0x3df641 = _0x3df6[_0x5d6302];
+        return _0x3df641;
+    }
+    document['querySelector'](_0x123e31(0xf1))[_0x123e31(0x105)](_0x123e31(0x102), function(_0x3675a4) {
+        const _0x368016 = _0x123e31;
+        var _0x52a8c5 = '';
+        str = _0x3675a4['target']['innerText'], (chunks = str['split'](new RegExp(keywords[_0x368016(0x11e)](_0xc0420b => '(' + _0xc0420b + ')')['join']('|'), 'i'))[_0x368016(0x117)](Boolean), markup = chunks[_0x368016(0x103)]((_0x5c8633, _0x21fc63) => {
+            const _0x354fb5 = _0x368016;
+            return _0x5c8633 += keywords['includes'](_0x21fc63) ? _0x354fb5(0x129) + _0x21fc63 + _0x354fb5(0xfd) : _0x354fb5(0x11d) + _0x21fc63 + _0x354fb5(0xfd), _0x5c8633;
+        }, '')), _0x3675a4[_0x368016(0xfc)]['innerHTML'] = markup;
     });
-    const arealFileBtn = document.getElementById("alogs");
-    const acustomBtn = document.getElementById("acustom-button");
-    const acustomTxt = document.getElementById("acustom-text");
-    acustomBtn.addEventListener("click", function() {
-        arealFileBtn.click();
+    const evrealFileBtn = document[_0x123e31(0x107)](_0x123e31(0x114)),
+        evcustomBtn = document[_0x123e31(0x107)](_0x123e31(0xf2)),
+        evcustomTxt = document[_0x123e31(0x107)]('evcustom-text');
+    evcustomBtn[_0x123e31(0x105)]('click', function() {
+        const _0x12576b = _0x123e31;
+        evrealFileBtn[_0x12576b(0x124)]();
+    }), evrealFileBtn[_0x123e31(0x105)](_0x123e31(0x106), function() {
+        const _0xe8b973 = _0x123e31;
+        evrealFileBtn['value'] ? evcustomTxt[_0xe8b973(0x11b)] = evrealFileBtn[_0xe8b973(0xfe)][_0xe8b973(0x121)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : evcustomTxt[_0xe8b973(0x11b)] = 'No\x20file\x20chosen,\x20yet.';
     });
-    arealFileBtn.addEventListener("change", function() {
-        if (arealFileBtn.value) {
-            acustomTxt.innerHTML = arealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            acustomTxt.innerHTML = "No file chosen, yet.";
-        }
+    const arealFileBtn = document[_0x123e31(0x107)](_0x123e31(0xf5)),
+        acustomBtn = document['getElementById'](_0x123e31(0x108)),
+        acustomTxt = document[_0x123e31(0x107)]('acustom-text');
+    acustomBtn['addEventListener'](_0x123e31(0x124), function() {
+        const _0x3e9ea7 = _0x123e31;
+        arealFileBtn[_0x3e9ea7(0x124)]();
+    }), arealFileBtn[_0x123e31(0x105)](_0x123e31(0x106), function() {
+        const _0x47e6cd = _0x123e31;
+        arealFileBtn[_0x47e6cd(0xfe)] ? acustomTxt['innerHTML'] = arealFileBtn[_0x47e6cd(0xfe)]['match'](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : acustomTxt[_0x47e6cd(0x11b)] = 'No\x20file\x20chosen,\x20yet.';
     });
-    const crealFileBtn = document.getElementById("clogs");
-    const ccustomBtn = document.getElementById("ccustom-button");
-    const ccustomTxt = document.getElementById("ccustom-text");
-    ccustomBtn.addEventListener("click", function() {
-        crealFileBtn.click();
-    });
-    crealFileBtn.addEventListener("change", function() {
-        if (crealFileBtn.value) {
-            ccustomTxt.innerHTML = crealFileBtn.value.match(
-                /[\/\\]([\w\d\s\.\-\(\)]+)$/
-            )[1];
-        } else {
-            ccustomTxt.innerHTML = "No file chosen, yet.";
-        }
-    });
-    // Hover timezone change
-    $(document.querySelector('#results')).on('mouseenter', 'spana', function(e) {
-        var time = $(e.target).context.innerText;
-        e.target.innerHTML = new Date(time).toString().replace(/ *\([^)]*\) */g, "");
-    });
-    $(document.querySelector('#results')).on('mouseenter', 'spanb', function(e) {
-        let tzone = document.getElementById('results', 'spanb#tzonehere').innerText.match(new RegExp(/tzone:[a-zA-Z/_]{0,50}/, "gi"));
-        let tzonehere = tzone[0].substring(tzone[0].indexOf(":") + 1);
-        var time = $(e.target).context.innerText;
-        e.target.innerHTML = new Date(time).toLocaleString("en-US", {
-            dateStyle: 'medium',
-            timeStyle: 'long',
-            timeZone: `${tzonehere}`
+    const crealFileBtn = document[_0x123e31(0x107)](_0x123e31(0xf8)),
+        ccustomBtn = document[_0x123e31(0x107)]('ccustom-button'),
+        ccustomTxt = document[_0x123e31(0x107)](_0x123e31(0x113));
+    ccustomBtn[_0x123e31(0x105)](_0x123e31(0x124), function() {
+        const _0x4d88c = _0x123e31;
+        crealFileBtn[_0x4d88c(0x124)]();
+    }), crealFileBtn['addEventListener'](_0x123e31(0x106), function() {
+        const _0x4c5354 = _0x123e31;
+        crealFileBtn['value'] ? ccustomTxt[_0x4c5354(0x11b)] = crealFileBtn[_0x4c5354(0xfe)][_0x4c5354(0x121)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : ccustomTxt[_0x4c5354(0x11b)] = _0x4c5354(0xf4);
+    }), $(document[_0x123e31(0x120)](_0x123e31(0x10a)))['on']('mouseenter', _0x123e31(0x111), function(_0x493d97) {
+        const _0x232617 = _0x123e31;
+        var _0x49ec63 = $(_0x493d97['target'])[_0x232617(0x116)][_0x232617(0x100)];
+        _0x493d97[_0x232617(0xfc)][_0x232617(0x11b)] = new Date(_0x49ec63)[_0x232617(0x119)]()['replace'](/ *\([^)]*\) */g, '');
+    }), $(document['querySelector'](_0x123e31(0x10a)))['on'](_0x123e31(0x10e), _0x123e31(0x10b), function(_0x35b8b6) {
+        const _0x2c2113 = _0x123e31;
+        let _0x1ecd1f = document[_0x2c2113(0x107)](_0x2c2113(0x128), _0x2c2113(0x112))[_0x2c2113(0x100)]['match'](new RegExp(/tzone:[a-zA-Z/_]{0,50}/, 'gi')),
+            _0x191a6c = _0x1ecd1f[0x0][_0x2c2113(0xf3)](_0x1ecd1f[0x0][_0x2c2113(0x10f)](':') + 0x1);
+        var _0x488fd7 = $(_0x35b8b6[_0x2c2113(0xfc)])[_0x2c2113(0x116)]['innerText'];
+        _0x35b8b6[_0x2c2113(0xfc)][_0x2c2113(0x11b)] = new Date(_0x488fd7)[_0x2c2113(0xfb)](_0x2c2113(0x123), {
+            'dateStyle': _0x2c2113(0x11c),
+            'timeStyle': _0x2c2113(0xff),
+            'timeZone': '' + _0x191a6c
         });
     });
 </script>
