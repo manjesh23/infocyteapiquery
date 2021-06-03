@@ -124,77 +124,80 @@
     </div>
 </body>
 <script>
-    const _0x5b1f = ['name', '27IRzVGL', 'evlogs', 'mouseover', '2sejllF', '<span\x20class=\x22keyword\x22>', '394721zrMfLd', 'results', 'raw', 'evcustom-button', 'medium', 'context', '31177HLBFKN', '1CucNxm', 'change', 'processName', 'acustom-button', 'toString', '3buJRGy', 'spanb', 'decodedPayload', '350JqrLtD', 'acustom-text', 'filter', 'replace', 'params', '54527loZnym', 'en-US', '564dOBooZ', 'substring', 'match', 'querySelector', 'remote_addr', 'click', 'getElementById', 'path', '1733lbNpjf', 'spanb#tzonehere', 'long', 'No\x20file\x20chosen,\x20yet.', 'value', 'join', 'innerText', 'remote_port', '#build', '453459vYJOpw', 'mouseenter', 'target', '<span\x20class=\x27other\x27>', '2090rCTTRx', '#results', 'map', 'indexOf', '</span>', 'state', 'ccustom-text', 'reduce', 'type', 'commandLine', 'hostOs', 'spana', 'evcustom-text', 'innerHTML', 'addEventListener', 'grandParentProcessName', '499181hiqKUt'];
-    const _0x13a0b6 = _0x1e09;
-    (function(_0x2ce8c2, _0x5535ac) {
-        const _0x487b08 = _0x1e09;
-        while (!![]) {
-            try {
-                const _0x422976 = -parseInt(_0x487b08(0xbd)) * -parseInt(_0x487b08(0xb5)) + parseInt(_0x487b08(0xe4)) * parseInt(_0x487b08(0xe9)) + parseInt(_0x487b08(0xeb)) + -parseInt(_0x487b08(0xaf)) * parseInt(_0x487b08(0xe6)) + parseInt(_0x487b08(0xb0)) * -parseInt(_0x487b08(0xd0)) + parseInt(_0x487b08(0xb8)) * -parseInt(_0x487b08(0xd4)) + parseInt(_0x487b08(0xc7)) * parseInt(_0x487b08(0xbf));
-                if (_0x422976 === _0x5535ac) break;
-                else _0x2ce8c2['push'](_0x2ce8c2['shift']());
-            } catch (_0xba52e5) {
-                _0x2ce8c2['push'](_0x2ce8c2['shift']());
-            }
+    // Infocyte keywords
+    var keywords = ["hostOs", "type", "raw", "processName", "commandLine", "path", "parentProcessName", "grandParentProcessName", "decodedPayload", "state", "name", "remote_addr", "destination_ip", "remote_port", "params"];
+    // Output shows the effect
+    document.querySelector('#build').addEventListener('mouseover', function(event) {
+        var newHTML = "";
+        // Loop through words
+        str = event.target.innerText;
+        chunks = str.split(new RegExp(keywords.map(w => `(${w})`).join('|'), 'i')).filter(Boolean), markup = chunks.reduce((acc, chunk) => {
+            acc += keywords.includes(chunk) ?
+                `<span class="keyword">${chunk}</span>` :
+                `<span class='other'>${chunk}</span>`
+            return acc
+        }, '')
+        event.target.innerHTML = markup;
+    });
+    // evlogs alogs and clogs button function
+    const evrealFileBtn = document.getElementById("evlogs");
+    const evcustomBtn = document.getElementById("evcustom-button");
+    const evcustomTxt = document.getElementById("evcustom-text");
+    evcustomBtn.addEventListener("click", function() {
+        evrealFileBtn.click();
+    });
+    evrealFileBtn.addEventListener("change", function() {
+        if (evrealFileBtn.value) {
+            evcustomTxt.innerHTML = evrealFileBtn.value.match(
+                /[\/\\]([\w\d\s\.\-\(\)]+)$/
+            )[1];
+        } else {
+            evcustomTxt.innerHTML = "No file chosen, yet.";
         }
-    }(_0x5b1f, 0x7bdca));
-    var keywords = [_0x13a0b6(0xde), _0x13a0b6(0xdc), _0x13a0b6(0xed), _0x13a0b6(0xb2), _0x13a0b6(0xdd), _0x13a0b6(0xc6), 'parentProcessName', _0x13a0b6(0xe3), _0x13a0b6(0xb7), _0x13a0b6(0xd9), _0x13a0b6(0xe5), _0x13a0b6(0xc3), 'destination_ip', _0x13a0b6(0xce), _0x13a0b6(0xbc)];
-    document[_0x13a0b6(0xc2)](_0x13a0b6(0xcf))[_0x13a0b6(0xe2)](_0x13a0b6(0xe8), function(_0x35c767) {
-        const _0x5494ca = _0x13a0b6;
-        var _0x4ecf78 = '';
-        str = _0x35c767[_0x5494ca(0xd2)][_0x5494ca(0xcd)], (chunks = str['split'](new RegExp(keywords[_0x5494ca(0xd6)](_0x94a50f => '(' + _0x94a50f + ')')[_0x5494ca(0xcc)]('|'), 'i'))[_0x5494ca(0xba)](Boolean), markup = chunks[_0x5494ca(0xdb)]((_0x37e01b, _0x1fcbe6) => {
-            const _0x3bfbd7 = _0x5494ca;
-            return _0x37e01b += keywords['includes'](_0x1fcbe6) ? _0x3bfbd7(0xea) + _0x1fcbe6 + '</span>' : _0x3bfbd7(0xd3) + _0x1fcbe6 + _0x3bfbd7(0xd8), _0x37e01b;
-        }, '')), _0x35c767[_0x5494ca(0xd2)][_0x5494ca(0xe1)] = markup;
     });
-    const evrealFileBtn = document[_0x13a0b6(0xc5)](_0x13a0b6(0xe7)),
-        evcustomBtn = document[_0x13a0b6(0xc5)](_0x13a0b6(0xac)),
-        evcustomTxt = document[_0x13a0b6(0xc5)](_0x13a0b6(0xe0));
-    evcustomBtn['addEventListener'](_0x13a0b6(0xc4), function() {
-        const _0x3ce7fc = _0x13a0b6;
-        evrealFileBtn[_0x3ce7fc(0xc4)]();
-    }), evrealFileBtn['addEventListener'](_0x13a0b6(0xb1), function() {
-        const _0x154976 = _0x13a0b6;
-        evrealFileBtn[_0x154976(0xcb)] ? evcustomTxt[_0x154976(0xe1)] = evrealFileBtn[_0x154976(0xcb)]['match'](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : evcustomTxt[_0x154976(0xe1)] = _0x154976(0xca);
+    const arealFileBtn = document.getElementById("alogs");
+    const acustomBtn = document.getElementById("acustom-button");
+    const acustomTxt = document.getElementById("acustom-text");
+    acustomBtn.addEventListener("click", function() {
+        arealFileBtn.click();
     });
-    const arealFileBtn = document[_0x13a0b6(0xc5)]('alogs'),
-        acustomBtn = document[_0x13a0b6(0xc5)](_0x13a0b6(0xb3)),
-        acustomTxt = document['getElementById'](_0x13a0b6(0xb9));
-    acustomBtn['addEventListener'](_0x13a0b6(0xc4), function() {
-        const _0x3e0e50 = _0x13a0b6;
-        arealFileBtn[_0x3e0e50(0xc4)]();
-    }), arealFileBtn[_0x13a0b6(0xe2)](_0x13a0b6(0xb1), function() {
-        const _0x1a2f74 = _0x13a0b6;
-        arealFileBtn[_0x1a2f74(0xcb)] ? acustomTxt[_0x1a2f74(0xe1)] = arealFileBtn[_0x1a2f74(0xcb)][_0x1a2f74(0xc1)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : acustomTxt[_0x1a2f74(0xe1)] = _0x1a2f74(0xca);
+    arealFileBtn.addEventListener("change", function() {
+        if (arealFileBtn.value) {
+            acustomTxt.innerHTML = arealFileBtn.value.match(
+                /[\/\\]([\w\d\s\.\-\(\)]+)$/
+            )[1];
+        } else {
+            acustomTxt.innerHTML = "No file chosen, yet.";
+        }
     });
-
-    function _0x1e09(_0x31bc30, _0x47a319) {
-        _0x31bc30 = _0x31bc30 - 0xac;
-        let _0x5b1f4c = _0x5b1f[_0x31bc30];
-        return _0x5b1f4c;
-    }
-    const crealFileBtn = document['getElementById']('clogs'),
-        ccustomBtn = document[_0x13a0b6(0xc5)]('ccustom-button'),
-        ccustomTxt = document['getElementById'](_0x13a0b6(0xda));
-    ccustomBtn[_0x13a0b6(0xe2)](_0x13a0b6(0xc4), function() {
-        const _0x72878 = _0x13a0b6;
-        crealFileBtn[_0x72878(0xc4)]();
-    }), crealFileBtn[_0x13a0b6(0xe2)](_0x13a0b6(0xb1), function() {
-        const _0x3a6006 = _0x13a0b6;
-        crealFileBtn[_0x3a6006(0xcb)] ? ccustomTxt['innerHTML'] = crealFileBtn[_0x3a6006(0xcb)][_0x3a6006(0xc1)](/[\/\\]([\w\d\s\.\-\(\)]+)$/)[0x1] : ccustomTxt['innerHTML'] = 'No\x20file\x20chosen,\x20yet.';
-    }), $(document[_0x13a0b6(0xc2)](_0x13a0b6(0xd5)))['on'](_0x13a0b6(0xd1), _0x13a0b6(0xdf), function(_0x1a9688) {
-        const _0x7fd12b = _0x13a0b6;
-        var _0x349f4e = $(_0x1a9688[_0x7fd12b(0xd2)])[_0x7fd12b(0xae)][_0x7fd12b(0xcd)];
-        _0x1a9688[_0x7fd12b(0xd2)][_0x7fd12b(0xe1)] = new Date(_0x349f4e)[_0x7fd12b(0xb4)]()[_0x7fd12b(0xbb)](/ *\([^)]*\) */g, '');
-    }), $(document[_0x13a0b6(0xc2)]('#results'))['on'](_0x13a0b6(0xd1), _0x13a0b6(0xb6), function(_0x484f1f) {
-        const _0x1df456 = _0x13a0b6;
-        let _0x3f95bf = document[_0x1df456(0xc5)](_0x1df456(0xec), _0x1df456(0xc8))[_0x1df456(0xcd)]['match'](new RegExp(/tzone:[a-zA-Z/_]{0,50}/, 'gi')),
-            _0xebb0ec = _0x3f95bf[0x0][_0x1df456(0xc0)](_0x3f95bf[0x0][_0x1df456(0xd7)](':') + 0x1);
-        var _0x13c745 = $(_0x484f1f[_0x1df456(0xd2)])[_0x1df456(0xae)][_0x1df456(0xcd)];
-        _0x484f1f['target'][_0x1df456(0xe1)] = new Date(_0x13c745)['toLocaleString'](_0x1df456(0xbe), {
-            'dateStyle': _0x1df456(0xad),
-            'timeStyle': _0x1df456(0xc9),
-            'timeZone': '' + _0xebb0ec
+    const crealFileBtn = document.getElementById("clogs");
+    const ccustomBtn = document.getElementById("ccustom-button");
+    const ccustomTxt = document.getElementById("ccustom-text");
+    ccustomBtn.addEventListener("click", function() {
+        crealFileBtn.click();
+    });
+    crealFileBtn.addEventListener("change", function() {
+        if (crealFileBtn.value) {
+            ccustomTxt.innerHTML = crealFileBtn.value.match(
+                /[\/\\]([\w\d\s\.\-\(\)]+)$/
+            )[1];
+        } else {
+            ccustomTxt.innerHTML = "No file chosen, yet.";
+        }
+    });
+    // Hover timezone change
+    $(document.querySelector('#results')).on('mouseenter', 'spana', function(e) {
+        var time = $(e.target).context.innerText;
+        e.target.innerHTML = new Date(time).toString().replace(/ *\([^)]*\) */g, "");
+    });
+    $(document.querySelector('#results')).on('mouseenter', 'spanb', function(e) {
+        let tzone = document.getElementById('results', 'spanb#tzonehere').innerText.match(new RegExp(/tzone:[a-zA-Z/_]{0,50}/, "gi"));
+        let tzonehere = tzone[0].substring(tzone[0].indexOf(":") + 1);
+        var time = $(e.target).context.innerText;
+        e.target.innerHTML = new Date(time).toLocaleString("en-US", {
+            dateStyle: 'medium',
+            timeStyle: 'long',
+            timeZone: `${tzonehere}`
         });
     });
 </script>
