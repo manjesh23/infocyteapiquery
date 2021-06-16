@@ -1,13 +1,38 @@
-.text {
-    position: absolute;
-    top: 7%;
-    left: 5%;
-    transform: translate(50%, -50%);
-    font-family: verdana;
-    font-size: 2em;
-    font-weight: 700;
-    color: #f5f5f5;
-    text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191, 1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191, 1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191, 1px 10px 1px #919191, 1px 18px 6px rgba(16, 16, 16, 0.4), 1px 22px 10px rgba(16, 16, 16, 0.2), 1px 25px 35px rgba(16, 16, 16, 0.2), 1px 30px 60px rgba(16, 16, 16, 0.4);
+body {
+    line-height: 1;
+}
+
+h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: monospace;
+    cursor: pointer
+}
+
+h1 span {
+    transition: .3s linear
+}
+
+h1:hover span:nth-child(1) {
+    margin-right: 5px
+}
+
+h1:hover span:nth-child(1):after {
+    font-size: 16px;
+    content: "         Making things easy...";
+}
+
+h1:hover span {
+    color: #fff;
+    text-shadow: 0 0 10px rgb(48, 151, 235), 0 0 2px rgb(48, 151, 235), 0 0 3px rgb(48, 151, 235);
+}
+
+
+/* iFrame settings */
+
+iframe {
+    padding-top: 10px;
 }
 
 
@@ -15,8 +40,15 @@
 
 .tab {
     overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.tab:hover {
+    border-radius: 20px;
 }
 
 
@@ -24,10 +56,10 @@
 
 .tab button {
     background-color: inherit;
+    color: aliceblue;
     float: left;
-    border-radius: 25px;
+    border-radius: 20px;
     border: none;
-    outline: none;
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
@@ -38,14 +70,19 @@
 /* Change background color of buttons on hover */
 
 .tab button:hover {
-    background-color: #ddd;
+    background-color: rgb(114, 112, 112);
+    text-shadow: 0 0 10px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
+    width: 150px;
 }
 
 
 /* Create an active/current tablink class */
 
 .tab button.active {
-    background-color: #ccc;
+    background-color: rgb(95, 93, 93);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
+    width: 150px;
 }
 
 
@@ -54,14 +91,22 @@
 .tabcontent {
     display: none;
     padding: 6px 12px;
-    border: 1px solid #ccc;
     border-top: none;
 }
 
 textarea {
+    background-color: rgb(70, 69, 69);
     resize: both;
-    width: 60%;
+    padding: 10px;
+    border-radius: 5px;
+    width: 65%;
     height: 150px;
+    color: rgb(221, 213, 213);
+    box-shadow: 0 0 2px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
+}
+
+textarea:focus {
+    box-shadow: 0 0 10px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
 }
 
 
@@ -69,7 +114,6 @@ textarea {
 
 .three-col {
     overflow: hidden;
-    /* Makes this div contain its floats */
 }
 
 .three-col .col1,
@@ -87,28 +131,95 @@ textarea {
 }
 
 .three-col .col3 {
-    float: right;
+    float: left;
 }
 
 .three-col label {
     display: block;
 }
 
+
+/* Logzlizer template */
+
+.lthree-col {
+    overflow: hidden;
+}
+
+.lthree-col .col1,
+.lthree-col .col2,
+.lthree-col .col3,
+.lthree-col .col4 {
+    width: 25%;
+}
+
+.lthree-col .col1 {
+    float: left;
+}
+
+.lthree-col .col2 {
+    float: left;
+}
+
+.lthree-col .col3 {
+    float: left;
+}
+
+.lthree-col .col4 {
+    float: right;
+}
+
+.lthree-col label {
+    display: block;
+}
+
+
+/* 4th GUI Logs button style */
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+#guilogs {
+    height: 100px;
+    width: 350px;
+    border: 1px solid gray;
+    background-color: rgb(70, 69, 69);
+    color: white;
+}
+
+#guilogs:focus {
+    box-shadow: 0 0 10px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
+}
+
 .textbox {
     resize: both;
     width: 95%;
+    font-size: 15px;
+    padding: 4px;
+    border-radius: 5px;
     height: 150px;
+    box-shadow: 0 0 2px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
 }
 
 #build {
     resize: both;
     width: 100%;
     height: 150px;
+    border-radius: 5px;
     padding: 10px;
-    background-color: white;
-    color: black;
+    background-color: rgb(70, 69, 69);
+    color: rgb(199, 192, 192);
     font-size: 16px;
     font-family: monospace;
+    box-shadow: 0 0 2px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
+}
+
+#build:focus {
+    box-shadow: 0 0 10px #fff, 0 0 1.5px #fff, 0 0 2px #fff;
 }
 
 .keyword {
@@ -121,10 +232,10 @@ textarea {
     word-wrap: break-word;
     font-size: 14px;
     margin-top: 20px;
-    padding: auto;
     margin-bottom: 40px;
-    color: rgb(139, 139, 139);
-    background-color: rgba(3, 2, 2, 0.856);
+    color: rgb(155, 155, 155);
+    background-color: rgb(54, 54, 54);
+    border-radius: 10px;
 }
 
 .logsuccess {
@@ -157,7 +268,7 @@ textarea {
 } */
 
 .loginfoh:hover::after {
-    background-color: rgb(209, 204, 204);
+    background-color: rgb(192, 189, 189);
     border: 2px;
     border-radius: 10px;
     font-size: 20px;
