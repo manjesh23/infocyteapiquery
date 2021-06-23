@@ -325,3 +325,65 @@ a:hover {
     background-color: transparent;
     text-decoration: underline;
 }
+
+
+/* Into page tools */
+
+.para {
+    font-size: 23px;
+    background: -webkit-linear-gradient(rgb(187, 194, 187), rgb(102, 103, 104));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Manjesh Styling */
+
+@import url(https://fonts.googleapis.com/css?family=Merienda);
+body {
+    font-family: calibri;
+}
+
+span {
+    text-align: center;
+    display: flex;
+}
+
+.divm {
+    opacity: 0.4;
+    color: white;
+    font: 40px Merienda;
+    text-shadow: 1px 1px 5px #dddddd;
+    transition: opacity 500ms linear, text-shadow 500ms ease-in-out, color 300ms linear;
+}
+
+.divm:hover {
+    opacity: 0.8;
+    text-shadow: 1px 1px #454545;
+    color: rgb(28, 230, 213);
+    text-shadow: 0px 0px 20px #a09b9b;
+    animation: myanim 2000ms infinite linear;
+}
+
+.divm:active {
+    opacity: 0.8;
+    text-shadow: 1px 1px 5px #000000, 2px 2px 5px #000000, 3px 3px 5px #000000, 4px 4px 5px #000000, 5px 5px 5px #000000, 6px 6px 50px #000000, 7px 7px 5px #000000, 8px 8px 5px #000000, 9px 9px 5px #000000, 10px 10px 5px #000000, 11px 11px 5px #000000, 12px 12px 5px #000000, 13px 13px 5px #000000, 14px 14px 5px #000000, 15px 15px 5px #000000, 16px 16px 5px #000000, 16px 16px 5px #000000, 17px 17px 5px #000000, 18px 18px 5px #000000, 19px 19px 5px #000000;
+}
+
+@keyframes myanim {
+    10% {
+        text-shadow: 1px 1px 10px #e01a1a;
+    }
+    25% {
+        text-shadow: 1px 1px 10px #73ac0b;
+    }
+    50% {
+        text-shadow: 1px 1px 10px #620fe7;
+    }
+    75% {
+        text-shadow: 1px 1px 10px #e9c80f;
+    }
+    100% {
+        text-shadow: 1px 1px 10px #d40e7b;
+    }
+}
