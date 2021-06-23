@@ -37,7 +37,7 @@
     </div>
     <hr class="bg-light" />
     <div class="tab container">
-        <button class="tablinks" onclick="opentab(event, 'home')">Home</button>
+        <button class="tablinks" onclick="opentab(event, 'intro')">Intro</button>
         <button class="tablinks" onclick="opentab(event, 'yaml')">Rules Tester</button>
         <button class="tablinks" onclick="opentab(event, 'yamlb')">Rule Builder</button>
         <button class="tablinks" onclick="opentab(event, 'logz')">Logalizer</button>
@@ -48,9 +48,29 @@
             <pre class="text-muted" id="landingpage"></pre>
         </div>
 
-        <div id="home" class="tabcontent">
-            <h3>Home</h3>
-            <p>This is our homepage.</p>
+        <div id="intro" class="tabcontent">
+            <h3>Intro</h3>
+            <p class="para">This page explains how to use features of this project...</p>
+            <hr>
+            <pre class="fs-6 text-nowrap"><p class="text-info fs-4">Infocyteapiquery</p> --> is a Python module to access data from Infocyte Cloud SaaS platform. Detailed guide for the Python module is available <a href="https://github.com/manjesh23/infocyteapiquery">here.</a>
+            Wiki section provides basic examples.<p> --> If any issues or errors seen, please feel free to raise a ticket <a href="https://github.com/manjesh23/infocyteapiquery/issues">here.</a></p></pre>
+            <pre class="fs-6"><p class="text-info fs-4">Rules Tester</p> --> is a project to test offline scan data against yaml rules and check if the rules are triggered.<p> --> Currently this feature is still under design.</p></pre>
+            <pre class="fs-6"><p class="text-info fs-4">Rule Builder</p> --> is used to generate new yaml rules.
+        * Mandate: This field is must.
+        * AND: Strict match the parameters.
+        * OR: Optional match the parameters.
+    Do's: - Use simple patterns (without escape characters).
+          - Keep the rule as simple as possible.
+    Don't: - No double quotes or double equals symbol.
+ --> Once we have the parameters added in the text box, click on the <strong class="text-warning">Build Rule</strong> button
+ --> <strong class="text-warning">Flow Diagram</strong> button can be used to check the rail road diagram.
+ <pre class="fs-6"><p class="text-info fs-4">Logalizer</p> --> Reading the logs made easy by highliting the errors, warnings and success logs by simple colors.<p> --> Upload the respective logs by button click and are ready to analyze.</p><strong>Note:</strong> Incorrect logs uploaded using the button will cause the page reload. Max log size is 10MB.</p><p><strong class="text-warning">Event Viewer Logs: </strong><code class="text-muted">Get-EventLog -LogName System -Message *infocyte* | Format-Table -AutoSize | Out-File 'C:\.....\Desktop\ic.txt'</code></p><p><strong class="text-warning">Agent Logs: </strong><code class="text-muted">C:\Program Files\Infocyte\Agent\logs</code></p><p><strong class="text-warning">Controller Logs: </strong><code class="text-muted">C:\Program Files\Infocyte\HUNT Controller\logs</code></p><p><strong class="text-warning">GUI Logs: </strong><code class="text-muted">Task List --> Timeline</code></p><p><strong class="text-success">Tricks: </strong>Hover on the agent logs timestamp, UTC time will be converted to browser time<br>        Add 'tzone:Asia/Calcutta' keyword into the actual agent log file --> save --> upload, then UTC timestamp hover will be converted to Asia/Calcutta time.</p>
+</pre>
+            </pre>
+
+            <span>
+    <div class="divm" style="margin-left: calc(100vw - 20%)">Manjesh N</div>
+  </span>
         </div>
 
 
