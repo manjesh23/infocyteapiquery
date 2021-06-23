@@ -29,6 +29,14 @@ h1:hover span {
 }
 
 
+/* Placeholder color */
+
+::placeholder {
+    color: rgb(192, 185, 185);
+    opacity: 1;
+}
+
+
 /* iFrame settings */
 
 iframe {
@@ -274,6 +282,10 @@ textarea:focus {
     font-size: 20px;
 }
 
+.missing {
+    color: rgb(233, 72, 72);
+}
+
 .oserror10051:hover:after {
     content: " happens because the other network is unreachable, usually because there is a problem with the router or modem on the computer attempting the connection. This can be as harmless as the router being shut off or a firewall getting in the way";
 }
@@ -292,4 +304,24 @@ textarea:focus {
 
 .oserror1450:hover::after {
     content: " The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.)"
+}
+
+.missing:hover::after {
+    content: "Try running the offline scan via command line and extract the tarball to see if the mssing data on GUI is present"
+}
+
+
+/* Hyperlink colors*/
+
+a:link {
+    color: red;
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
 }
