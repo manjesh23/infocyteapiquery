@@ -340,15 +340,6 @@ a:hover {
 /* Manjesh Styling */
 
 @import url(https://fonts.googleapis.com/css?family=Merienda);
-body {
-    font-family: calibri;
-}
-
-span {
-    text-align: center;
-    display: flex;
-}
-
 .divm {
     opacity: 0.4;
     color: white;
