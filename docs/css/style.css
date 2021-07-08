@@ -306,6 +306,14 @@ textarea:focus {
     content: " The operating system returned error 1450 (Insufficient system resources exist to complete the requested service.)"
 }
 
+.oserror104:hover::after {
+    content: "Connection reset by peer host. It means that TCP reset has been sent to your computer."
+}
+
+.Luastring:hover::after {
+    content: "Could be a error while running the custom Lua extension."
+}
+
 .missing:hover::after {
     content: "Try running the offline scan via command line and extract the tarball to see if the mssing data on GUI is present"
 }
