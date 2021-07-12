@@ -321,22 +321,6 @@ textarea:focus {
 }
 
 
-/* Hyperlink colors*/
-
-a:link {
-    color: red;
-    background-color: transparent;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-a:hover {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-
 /* Into page tools */
 
 .para {
