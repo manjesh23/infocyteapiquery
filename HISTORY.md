@@ -78,3 +78,6 @@
 * Exposed few more ps and pse variables
 * Pytest for both ps and pse functions
 * Fixed minor bug with pse module
+
+## 1.1.16(2021-10-04)
+* Removed Python 3.6 support (Pandas 1.3.3)

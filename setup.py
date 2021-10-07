@@ -46,6 +46,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/manjesh23/infocyteapiquery',
-    version='1.1.15',
+    version='1.1.16',
     zip_safe=False,
 )
