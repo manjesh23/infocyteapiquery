@@ -122,4 +122,4 @@ Please refer Wiki Section of Github for details. [Wiki here](https://github.com/
 
 © 2021 Manjesh N
 
-This repository is licensed under the Apache 2.0 license. See LICENSE for more details.
+This repository is licensed under the Apache 2.0 license. See LICENSE for details.
