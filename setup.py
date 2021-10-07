@@ -20,7 +20,7 @@ setup(
     author="Manjesh N",
     author_email='manjesh_n@hotmail.com',
     name='infocyteapiquery',
-    python_requires='>=3.6',
+    python_requires='>=3.7',
     package_dir={'': '.'},
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -30,7 +30,6 @@ setup(
         'Intended Audience :: Customer Service',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
