@@ -15,7 +15,7 @@ pd.set_option('display.max_colwidth', None)
 '''
 This is API Query Function
 '''
-# Main function
+# Main function starts here
 
 
 def query(cname="cname", apikey="apikey", apiquery="apiquery"):
