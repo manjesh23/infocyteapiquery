@@ -265,6 +265,8 @@ textarea:focus {
 .oserror10061,
 .oserror1450,
 .oserror104,
+.error404,
+.error500,
 .Luastring {
     color: rgb(233, 72, 72);
 }
@@ -312,12 +314,12 @@ textarea:focus {
     content: " Connection reset by peer host. It means that TCP reset has been sent to your computer."
 }
 
-.error500:hover::after {
-    content: " Could be a error while running the custom Lua extension."
-}
-
 .error404:hover::after {
     content: " HTTP 404 Not Found response status code indicates that the server cannot find the requested resource."
+}
+
+.error500:hover::after {
+    content: " Could be a error while running the custom Lua extension."
 }
 
 .Luastring:hover::after {
