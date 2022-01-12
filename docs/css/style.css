@@ -320,8 +320,8 @@ textarea:focus {
     content: " HTTP 404 Not Found response status code indicates that the server cannot find the requested resource."
 }
 
-.error500:hover::after {
-    content: "  HTTP 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request."
+.Luastring:hover::after {
+    content: " Could be a error while running the custom Lua extension."
 }
 
 .missing:hover::after {
