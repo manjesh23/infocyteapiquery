@@ -1,4 +1,4 @@
-pip==21.3
+pip==19
 wheel
 Sphinx
 twine
