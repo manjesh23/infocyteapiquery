@@ -267,6 +267,7 @@ textarea:focus {
 .oserror104,
 .error404,
 .error500,
+.oserror11001,
 .Luastring {
     color: rgb(233, 72, 72);
 }
@@ -319,7 +320,11 @@ textarea:focus {
 }
 
 .error500:hover::after {
-    content: " Could be a error while running the custom Lua extension."
+    content: " HTTP 500 Internal Server Error server error response code indicates that the server encountered an unexpected condition that prevented it from fulfilling the request."
+}
+
+.oserror11001:hover::after {
+    content: " Socket error 11001 happens when the server to which the user's computer is attempting to connect does not exist."
 }
 
 .Luastring:hover::after {
