@@ -3,7 +3,7 @@ wheel
 Sphinx
 twine
 
-pandas==1.4.0
+pandas
 tqdm==4.61.0
 paginateit
 requests
