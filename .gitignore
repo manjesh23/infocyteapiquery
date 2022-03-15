@@ -10,10 +10,6 @@ __pycache__/
 *.so
 
 # Manjesh codehide
-_*.html
-_*.js
-_*.py
-_*.css
 
 # Distribution / packaging
 .Python
