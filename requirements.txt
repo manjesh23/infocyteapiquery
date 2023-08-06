@@ -1,5 +1,5 @@
 pip
-wheel
+wheel==0.41.1
 Sphinx
 twine
 
